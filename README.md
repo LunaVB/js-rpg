@@ -3,12 +3,9 @@ A javascript RPG based on the Persona franchise
 link [here](https://lunavb.github.io/js-rpg/rpg.html)
 
 <h3>TO DO</h3>
-1. fix round not ending if one/two spots didn't spawn an enemy.</br>
-2. prevent enemy from moving after they've been killed.</br>
-3. hold proper info in holdTeamInfo and holdEnemyInfo after making a move (stats//calcHits).</br>
-4. calulate guard.</br>
-5. draw hp and mana to screen + update after every attack (possible icons for buffs later?).</br>
-6. decide order of attacks, atm I can't seem to get the speed values back to the character objects after sorting them.</br>
+1. hold proper info in holdTeamInfo and holdEnemyInfo after making a move (stats//calcHits).</br>
+2. calulate guard.</br>
+3. decide order of attacks, atm I can't seem to get the speed values back to the character objects after sorting them.</br>
 
 <h3>DONE</h3>
 1. disable selects when pressing play button.</br>
@@ -31,6 +28,10 @@ link [here](https://lunavb.github.io/js-rpg/rpg.html)
 18. fix names in buttons.</br>
 19. despawn enemy and clear enemy data when killed.</br>
 20. make "waves" (random 1-3 # of enemies).</br>
+21. fix round not ending if one/two spots didn't spawn an enemy.</br>
+22. prevent enemy from moving after they've been killed.</br>
+23. draw hp and mana to screen + update after every attack.</br>
+
 
 
 <h2>IDEAS: <h2>

@@ -31,28 +31,30 @@ let enemyImg1 = document.getElementById("enemy1");
 let enemyImg2 = document.getElementById("enemy2");
 let enemyImg3 = document.getElementById("enemy3");
 let baseEnemyItem = new enemyItemStats("branch", "closeCombat", 10, 10, 30, 0, 15, 0, 0);
-let enemySlime = new enemyStats("slime", move, "lowlvl", baseEnemyItem, 100, 0, 20, 20, 0, "agi", "phys");
-let enemySlime2 = new enemyStats("slime 2", move, "lowlvl", baseEnemyItem, 100, 0, 20, 20, 0, "agi", "phys");
-let enemySlime3 = new enemyStats("slime 3", move, "lowlvl", baseEnemyItem, 100, 0, 20, 20, 0, "agi", "phys");
 
-let enemyPyrojack = new enemyStats("pyrojack", move, "lowlvl", baseEnemyItem, 100, 0, 20, 20, 0, "garu", "agi");
-let enemyPyrojack2 = new enemyStats("pyrojack 2", move, "lowlvl", baseEnemyItem, 100, 0, 20, 20, 0, "garu", "agi");
-let enemyPyrojack3 = new enemyStats("pyrojack 3", move, "lowlvl", baseEnemyItem, 100, 0, 20, 20, 0, "garu", "agi");
-
-let enemyKoropokkuru = new enemyStats("koropokkuru", move, "lowlvl", baseEnemyItem, 100, 0, 20, 20, 0, "agi", "bufu");
-let enemyKoropokkuru2 = new enemyStats("koropokkuru 2", move, "lowlvl", baseEnemyItem, 100, 0, 20, 20, 0, "agi", "bufu");
-let enemyKoropokkuru3 = new enemyStats("koropokkuru 3", move, "lowlvl", baseEnemyItem, 100, 0, 20, 20, 0, "agi", "bufu");
-
-let enemyPixie = new enemyStats("pixie", move, "lowlvl", baseEnemyItem, 100, 0, 20, 20, 0, "bufu", "zio");
-let enemyPixie2 = new enemyStats("pixie 2", move, "lowlvl", baseEnemyItem, 100, 0, 20, 20, 0, "bufu", "zio");
-let enemyPixie3 = new enemyStats("pixie 3", move, "lowlvl", baseEnemyItem, 100, 0, 20, 20, 0, "bufu", "zio");
-
-let enemyMakami = new enemyStats("makami", move, "lowlvl", baseEnemyItem, 100, 0, 20, 20, 0, "zio", "garu");
-let enemyMakami2 = new enemyStats("makami 2", move, "lowlvl", baseEnemyItem, 100, 0, 20, 20, 0, "zio", "garu");
-let enemyMakami3 = new enemyStats("makami 3", move, "lowlvl", baseEnemyItem, 100, 0, 20, 20, 0, "zio", "garu");
 
 //LOW LEVEL WAVE SPAWNER (SLIME, PYROJACK, KOROPOKKURU, PIXIE AND MAKAMI)
 function generateLowLvlWave() {
+    let enemySlime = new enemyStats("slime", move, "lowlvl", baseEnemyItem, 40, 40, 20, 20, 0, "agi", "phys");
+    let enemySlime2 = new enemyStats("slime 2", move, "lowlvl", baseEnemyItem, 40, 40, 20, 20, 0, "agi", "phys");
+    let enemySlime3 = new enemyStats("slime 3", move, "lowlvl", baseEnemyItem, 40, 40, 20, 20, 0, "agi", "phys");
+
+    let enemyPyrojack = new enemyStats("pyrojack", move, "lowlvl", baseEnemyItem, 20, 20, 20, 20, 0, "garu", "agi");
+    let enemyPyrojack2 = new enemyStats("pyrojack 2", move, "lowlvl", baseEnemyItem, 20, 20, 20, 20, 0, "garu", "agi");
+    let enemyPyrojack3 = new enemyStats("pyrojack 3", move, "lowlvl", baseEnemyItem, 20, 20, 20, 20, 0, "garu", "agi");
+
+    let enemyKoropokkuru = new enemyStats("koropokkuru", move, "lowlvl", baseEnemyItem, 35, 35, 20, 20, 0, "agi", "bufu");
+    let enemyKoropokkuru2 = new enemyStats("koropokkuru 2", move, "lowlvl", baseEnemyItem, 35, 35, 20, 20, 0, "agi", "bufu");
+    let enemyKoropokkuru3 = new enemyStats("koropokkuru 3", move, "lowlvl", baseEnemyItem, 35, 35, 20, 20, 0, "agi", "bufu");
+
+    let enemyPixie = new enemyStats("pixie", move, "lowlvl", baseEnemyItem, 25, 25, 20, 20, 0, "bufu", "zio");
+    let enemyPixie2 = new enemyStats("pixie 2", move, "lowlvl", baseEnemyItem, 25, 25, 20, 20, 0, "bufu", "zio");
+    let enemyPixie3 = new enemyStats("pixie 3", move, "lowlvl", baseEnemyItem, 25, 25, 20, 20, 0, "bufu", "zio");
+
+    let enemyMakami = new enemyStats("makami", move, "lowlvl", baseEnemyItem, 55, 55, 20, 20, 0, "zio", "garu");
+    let enemyMakami2 = new enemyStats("makami 2", move, "lowlvl", baseEnemyItem, 55, 55, 20, 20, 0, "zio", "garu");
+    let enemyMakami3 = new enemyStats("makami 3", move, "lowlvl", baseEnemyItem, 55, 55, 20, 20, 0, "zio", "garu");
+
     console.log("creating wave ...")
     let mob1 = Math.floor(Math.random() * (5 - 1 + 1)) + 1; //decides which mobs will spawn in 1st spot
     let mob2 = Math.floor(Math.random() * (5 - 1 + 1)) + 1; //decides which mobs will spawn in 2nd spot
@@ -220,8 +222,14 @@ function generateLowLvlWave() {
             break;
     }
     holdEnemyInfo1 = enemy1;
+    document.getElementById("healthEnemy1").max = holdEnemyInfo1.maxhp;
     holdEnemyInfo2 = enemy2;
+    document.getElementById("healthEnemy2").max = holdEnemyInfo2.maxhp;
     holdEnemyInfo3 = enemy3;
+    document.getElementById("healthEnemy3").max = holdEnemyInfo3.maxhp;
+
+    statField.innerText += "\n" + "*----- NEW WAVE SPAWNED -----*" + "\n ";
+
     statField.innerText += enemy1.name + ", " + enemy2.name + " and " + enemy3.name + " have spawned" + "\n";
 
 }

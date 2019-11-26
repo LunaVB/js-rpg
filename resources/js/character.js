@@ -12,6 +12,21 @@ let playerName3 = document.getElementById("playerName3");
 let enemyName1 = document.getElementById("enemyName1");
 let enemyName2 = document.getElementById("enemyName2");
 let enemyName3 = document.getElementById("enemyName3");
+
+let healthPlayer1Max = document.getElementById("healthPlayer1").max;
+let healthPlayer2Max = document.getElementById("healthPlayer2").max;
+let healthPlayer3Max = document.getElementById("healthPlayer3").max;
+let healthPlayer1 = document.getElementById("healthPlayer1").value;
+let healthPlayer2 = document.getElementById("healthPlayer2").value;
+let healthPlayer3 = document.getElementById("healthPlayer3").value;
+
+let healthEnemy1Max = document.getElementById("healthEnemy1").max;
+let healthEnemy2Max = document.getElementById("healthEnemy2").max;
+let healthEnemy3Max = document.getElementById("healthEnemy3").max;
+let healthEnemy1 = document.getElementById("healthEnemy1").value;
+let healthEnemy2 = document.getElementById("healthEnemy2").value;
+let healthEnemy3 = document.getElementById("healthEnemy3").value;
+
 let move;
 let selectTeam;
 let selectEnemy;
@@ -61,34 +76,48 @@ function createChar() {
             case "joker":
                 selectedTeam[i] = charJoker;
                 document.getElementById("playerName" + (i + 1)).innerText = "joker";
+                document.getElementById("healthPlayer" + (i + 1)).max = charJoker.maxhp;
                 break;
             case "mona":
                 selectedTeam[i] = charMona;
                 document.getElementById("playerName" + (i + 1)).innerText = "mona";
+                document.getElementById("healthPlayer" + (i + 1)).max = charMona.maxhp;
+
                 break;
             case "skull":
                 selectedTeam[i] = charSkull;
                 document.getElementById("playerName" + (i + 1)).innerText = "skull";
+                document.getElementById("healthPlayer" + (i + 1)).max = charSkull.maxhp;
+
                 break;
             case "panther":
                 selectedTeam[i] = charPanther;
                 document.getElementById("playerName" + (i + 1)).innerText = "panther";
+                document.getElementById("healthPlayer" + (i + 1)).max = charPanther.maxhp;
+
                 break;
             case "fox":
                 selectedTeam[i] = charFox;
                 document.getElementById("playerName" + (i + 1)).innerText = "fox";
+                document.getElementById("healthPlayer" + (i + 1)).max = charFox.maxhp;
+
                 break;
             case "queen":
                 selectedTeam[i] = charQueen;
                 document.getElementById("playerName" + (i + 1)).innerText = "queen";
+                document.getElementById("healthPlayer" + (i + 1)).max = charQueen.maxhp;
+
                 break;
             case "noir":
                 selectedTeam[i] = charNoir;
                 document.getElementById("playerName" + (i + 1)).innerText = "noir";
+                document.getElementById("healthPlayer" + (i + 1)).max = charNoir.maxhp;
+
                 break;
             case "crow":
                 selectedTeam[i] = charCrow;
                 document.getElementById("playerName" + (i + 1)).innerText = "crow";
+                document.getElementById("healthPlayer" + (i + 1)).max = charCrow.maxhp;
                 break;
             default:
                 console.log("Something went wrong on character creation");
@@ -109,6 +138,8 @@ function createChar() {
                         enemyBtnArr[1].classList.remove("selected");
                         enemyBtnArr[2].classList.remove("selected");
                         selectEnemy = holdEnemyInfo1;
+                        healthEnemy1Max = holdEnemyInfo1.maxhp;
+                        healthEnemy1 = holdEnemyInfo1.hp;
                         console.log(holdEnemyInfo1);
                         break;
                     case enemyBtnArr[1]:
@@ -116,6 +147,8 @@ function createChar() {
                         enemyBtnArr[0].classList.remove("selected");
                         enemyBtnArr[2].classList.remove("selected");
                         selectEnemy = holdEnemyInfo2;
+                        healthEnemy2Max = holdEnemyInfo2.maxhp;
+                        healthEnemy2 = holdEnemyInfo2.hp;
                         console.log(holdEnemyInfo2);
                         break;
                     case enemyBtnArr[2]:
@@ -123,6 +156,8 @@ function createChar() {
                         enemyBtnArr[0].classList.remove("selected");
                         enemyBtnArr[1].classList.remove("selected");
                         selectEnemy = holdEnemyInfo3;
+                        healthEnemy3Max = holdEnemyInfo3.maxhp;
+                        healthEnemy3 = holdEnemyInfo3.hp;
                         console.log(selectEnemy);
                         console.log(holdEnemyInfo3);
                         break;
@@ -136,6 +171,11 @@ function createChar() {
                         teamBtnArr[2].classList.remove("selected");
                         holdTeamInfo1 = selectedTeam[0];
                         selectTeam = holdTeamInfo1;
+                        healthPlayer1Max = holdTeamInfo1.maxhp;
+                        healthPlayer1 = holdTeamInfo1.hp;
+                        playerImg1.style.backgroundImage = "url(./resources/img/characters/" + selectedTeam[0].name + "Thief.png)";
+                        playerImg2.style.backgroundImage = "url(./resources/img/characters/" + selectedTeam[1].name + ".png)";
+                        playerImg3.style.backgroundImage = "url(./resources/img/characters/" + selectedTeam[2].name + ".png)";
                         console.log(selectTeam);
                         break;
                     case teamBtnArr[1]:
@@ -144,6 +184,11 @@ function createChar() {
                         teamBtnArr[2].classList.remove("selected");
                         holdTeamInfo2 = selectedTeam[1];
                         selectTeam = holdTeamInfo2;
+                        healthPlayer2Max = holdTeamInfo2.maxhp;
+                        healthPlayer2 = holdTeamInfo2.hp;
+                        playerImg1.style.backgroundImage = "url(./resources/img/characters/" + selectedTeam[0].name + ".png)";
+                        playerImg2.style.backgroundImage = "url(./resources/img/characters/" + selectedTeam[1].name + "Thief.png)";
+                        playerImg3.style.backgroundImage = "url(./resources/img/characters/" + selectedTeam[2].name + ".png)";
                         console.log(selectTeam);
                         break;
                     case teamBtnArr[2]:
@@ -152,6 +197,11 @@ function createChar() {
                         teamBtnArr[1].classList.remove("selected");
                         holdTeamInfo3 = selectedTeam[2];
                         selectTeam = holdTeamInfo3;
+                        healthPlayer3Max = holdTeamInfo3.maxhp;
+                        healthPlayer3 = holdTeamInfo3.hp;
+                        playerImg1.style.backgroundImage = "url(./resources/img/characters/" + selectedTeam[0].name + ".png)";
+                        playerImg2.style.backgroundImage = "url(./resources/img/characters/" + selectedTeam[1].name + ".png)";
+                        playerImg3.style.backgroundImage = "url(./resources/img/characters/" + selectedTeam[2].name + "Thief.png)";
                         console.log(selectTeam);
                         break;
                 }

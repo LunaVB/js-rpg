@@ -43,7 +43,7 @@ function playerDamageDealt() {
         finalDmg = buffedDmg * doubleHit; //buffed dmg * possible 2nd hit
         enemyHp -= finalDmg;
         enemyDeath();
-        // console.log("base damage from item: " + baseDmg + "\n" + "enemy physical resistance from item: " + enemyPhysRes + "%" + "\n" + "normal damage done: " + normalDmg + "\n" + "damage after player buff calc: " + buffedDmg + "\n" + "Final damage after double hit check: " + finalDmg + "\n" + selectEnemy.name + " has " + enemyHp + " HP left");
+        console.log("base damage from item: " + baseDmg + "\n" + "enemy physical resistance from item: " + enemyPhysRes + "%" + "\n" + "normal damage done: " + normalDmg + "\n" + "damage after player buff calc: " + buffedDmg + "\n" + "Final damage after double hit check: " + finalDmg + "\n" + selectEnemy.name + " has " + enemyHp + " HP left");
     } else if (magChosen == true) { //magical skill
         calcDoubleHit();
         let normalDmg = Math.floor(baseDmg - ((baseDmg * enemyMagRes) / 100)); //base dmg - enemy resistance
@@ -76,7 +76,10 @@ startBtn.addEventListener("click", function () {
             console.log("guarding");
             statField.innerText += "Guarding. " + "will only take half damage next turn" + "\n"
             //TO DO}
-            moveMade()
+            playerMoveMade();
+            enemyDeath();
+            enemyMove();
+            enemyMoveMade();
         }
     })
     atkBtn.addEventListener("click", function () {
@@ -85,7 +88,10 @@ startBtn.addEventListener("click", function () {
         } else {
             physChosen = true;
             playerDamageDealt();
-            moveMade()
+            playerMoveMade();
+            enemyDeath();
+            enemyMove();
+            enemyMoveMade();
         }
     })
     magBtn.addEventListener("click", function () {
@@ -93,7 +99,10 @@ startBtn.addEventListener("click", function () {
             console.log("please select team member and enemy")
         } else {
             magChosen = true;
-            moveMade()
+            playerMoveMade();
+            enemyDeath();
+            enemyMove();
+            enemyMoveMade();
         }
     })
 })

@@ -31,12 +31,7 @@
                 <input type="image" id="crow" class="charSelect" src="./resources/img/characters/crow-small.jpg"
                     value="crow">
             </div>
-            <!-- <div id="selectedItem" class="blackbg">
-                <input type="image" class="itemSelect" src="/resources/img/characters/placeholder.jpg" value="staff">
-                <input type="image" class="itemSelect" src="/resources/img/characters/placeholder.jpg" value="dagger">
-                <input type="image" class="itemSelect" src="/resources/img/characters/placeholder.jpg" value="bow">
-                <input type="image" class="itemSelect" src="/resources/img/characters/placeholder.jpg" value="bow">
-            </div> -->
+
         </div>
         <div class="start"> <button id="startBtn">Start Game</button>
         </div>
@@ -61,6 +56,36 @@
                 <button class="enemyName" id="enemyName3"></button>
             </div>
         </div>
+        <div class="stats">
+            <div id="stats" class="stats1">
+                <div class="stats-mini">
+                    <progress id="healthPlayer1" value="100" max="100"></progress>
+                    <progress id="manaPlayer1" value="100" max="100"></progress>
+                </div>
+                <div class="stats-mini">
+                    <progress id="healthPlayer2" value="100" max="100"></progress>
+                    <progress id="manaPlayer2" value="100" max="100"></progress>
+                </div>
+                <div class="stats-mini">
+                    <progress id="healthPlayer3" value="100" max="100"></progress>
+                    <progress id="manaPlayer3" value="100" max="100"></progress>
+                </div>
+            </div>
+            <div id="stats" class="stats2">
+                <div class="stats-mini">
+                    <progress id="healthEnemy1" value="100" max="100"></progress>
+                    <progress id="manaEnemy1" value="" max=""></progress>
+                </div>
+                <div class="stats-mini">
+                    <progress id="healthEnemy2" value="100" max="100"></progress>
+                    <progress id="manaEnemy2" value="100" max="100"></progress>
+                </div>
+                <div class="stats-mini">
+                    <progress id="healthEnemy3" value="100" max="100"></progress>
+                    <progress id="manaEnemy3" value="100" max="100"></progress>
+                </div>
+            </div>
+        </div>
         <div id="infoField">
             <div id="menu" class="menu">
                 <button class="atkBtn" id="atkBtn"></button>
@@ -71,12 +96,14 @@
             </div>
             <div id="statField" class="statField"></div>
         </div>
-        <script src="./resources/js/character.js"></script>
-        <script src="./resources/js/characterStats.js"></script>
-        <script src="./resources/js/enemies.js"></script>
-        <script src="./resources/js/stats.js"></script>
-        <script src="./resources/js/gameloop.js"></script>
-        <script src="./resources/js/savegame.js"></script>
+    </div>
+
+    <script src="./resources/js/character.js"></script>
+    <script src="./resources/js/characterStats.js"></script>
+    <script src="./resources/js/enemies.js"></script>
+    <script src="./resources/js/stats.js"></script>
+    <script src="./resources/js/gameloop.js"></script>
+    <script src="./resources/js/savegame.js"></script>
 </body>
 
 </html>

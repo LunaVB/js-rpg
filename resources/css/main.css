@@ -46,7 +46,7 @@
     border: 2px solid black;
     display: flex;
     flex-wrap: nowrap;
-    justify-content: flex-start;
+    justify-content: center;
 }
 
 .statField {
@@ -55,7 +55,7 @@
     border: 1px solid white;
     color: white;
     background-color: black;
-
+    overflow-y: scroll;
 }
 
 .menu {
@@ -72,8 +72,29 @@
     border: 1px solid black;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-evenly;
     background-color: black;
+}
+
+.stats {
+    width: 46vw;
+    height: 40px;
+    border: 1px solid black;
+    display: flex;
+}
+
+.stats1,
+.stats2 {
+    width: 23vw;
+    height: 40px;
+    border: 1px solid black;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.stats-mini {
+    display: flex;
+    flex-direction: column;
 }
 
 .arena {
@@ -86,6 +107,25 @@
     background-repeat: no-repeat;
     background-size: contain;
     border: 1px solid white;
+}
+
+#healthPlayer1,
+#healthPlayer2,
+#healthPlayer3,
+#healthEnemy1,
+#healthEnemy2,
+#healthEnemy3 {
+    width: 110px;
+}
+
+#manaPlayer1,
+#manaPlayer2,
+#manaPlayer3,
+#manaEnemy1,
+#manaEnemy2,
+#manaEnemy3 {
+    width: 110px;
+    background-color: blue;
 }
 
 
@@ -118,21 +158,21 @@
 
 #player1 {
     top: 245px;
-    left: 450px;
+    left: 520px;
     position: absolute;
     z-index: 5;
 }
 
 #player2 {
     top: 225px;
-    left: 550px;
+    left: 600px;
     position: absolute;
     z-index: 4;
 }
 
 #player3 {
     top: 205px;
-    left: 650px;
+    left: 680px;
     position: absolute;
     z-index: 3;
 }
