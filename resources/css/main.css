@@ -1,0 +1,203 @@
+.field {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.blackbg {
+    background-color: black;
+}
+
+#startBtn {
+    width: 100px;
+    height: 20px;
+    border: 1px solid black;
+}
+
+.start {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.createField {
+    width: 64vw;
+    height: 76px;
+    margin: 10px;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    background-color: black;
+}
+
+.playfield {
+    width: 58vw;
+    height: 495px;
+    margin: 10px;
+    border: 2px solid black;
+    display: flex;
+    flex-wrap: nowrap;
+    /* background-image: url(/resources/img/bgTokyo.jpg);
+    background-size: cover;
+    background-repeat: no-repeat; */
+}
+
+#infoField {
+    width: 70vw;
+    height: 300px;
+    margin: 10px;
+    border: 2px solid black;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+}
+
+.statField {
+    width: 800px;
+    height: 300px;
+    border: 1px solid white;
+    color: white;
+    background-color: black;
+
+}
+
+.menu {
+    width: 800px;
+    height: 300px;
+    border: 1px solid black;
+    background-color: black;
+}
+
+.playerOrder,
+.enemyOrder {
+    width: 6vw;
+    height: 495px;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: black;
+}
+
+.arena {
+    width: 68vw;
+    height: 495px;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    background-image: url(/resources/img/menu/BG.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    border: 1px solid white;
+}
+
+
+.itemSelect,
+.charSelect {
+    border: 3px solid black;
+}
+
+.selected {
+    border: 2px solid red;
+}
+
+.player {
+    width: 250px;
+    height: 400px;
+    margin: 5px;
+    /* border: 1px solid black; */
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.enemy {
+    width: 300px;
+    height: 450px;
+    margin: 5px;
+    /* border: 1px solid black; */
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#player1 {
+    top: 245px;
+    left: 450px;
+    position: absolute;
+    z-index: 5;
+}
+
+#player2 {
+    top: 225px;
+    left: 550px;
+    position: absolute;
+    z-index: 4;
+}
+
+#player3 {
+    top: 205px;
+    left: 650px;
+    position: absolute;
+    z-index: 3;
+}
+
+#enemy1 {
+    top: 175px;
+    right: 500px;
+    position: absolute;
+    z-index: 5;
+}
+
+#enemy2 {
+    top: 155px;
+    right: 560px;
+    position: absolute;
+    z-index: 4;
+}
+
+#enemy3 {
+    top: 135px;
+    right: 620px;
+    position: absolute;
+    z-index: 3;
+}
+
+#playerName1,
+#playerName2,
+#playerName3,
+#enemyName1,
+#enemyName2,
+#enemyName3 {
+    width: 110px;
+    height: 50px;
+}
+
+/* #player4 {
+    top: 135px;
+    left: 400px;
+    position: absolute;
+    z-index: 2;
+} */
+
+.atkBtn {
+    background-image: url(/resources/img/menu/attack.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 300px;
+    height: 100px;
+}
+
+.magBtn {
+    background-image: url(/resources/img/menu/skills.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 300px;
+    height: 100px;
+}
+
+.guardBtn {
+    background-image: url(/resources/img/menu/guard.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 300px;
+    height: 100px;
+}

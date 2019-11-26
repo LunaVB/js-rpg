@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/resources/css/main.css">
+    <title>RPG</title>
+
+</head>
+
+<body>
+    <div class="field">
+        <div class="createField" class="blackbg">
+            <div id="selectedRace" class="blackbg">
+                <input type="image" id="joker" class="charSelect" src="/resources/img/characters/joker-small.jpg"
+                    value="joker">
+                <input type="image" id="mona" class="charSelect" src="/resources/img/characters/mona-small.jpg"
+                    value="mona">
+                <input type="image" id="skull" class="charSelect" src="/resources/img/characters/skull-small.jpg"
+                    value="skull">
+                <input type="image" id="panther" class="charSelect" src="/resources/img/characters/panther-small.jpg"
+                    value="panther">
+                <input type="image" id="fox" class="charSelect" src="/resources/img/characters//fox-small.jpg"
+                    value="fox">
+                <input type="image" id="queen" class="charSelect" src="/resources/img/characters/queen-small.jpg"
+                    value="queen">
+                <input type="image" id="noir" class="charSelect" src="/resources/img/characters/noir-small.jpg"
+                    value="noir">
+                <input type="image" id="crow" class="charSelect" src="/resources/img/characters/crow-small.jpg"
+                    value="crow">
+            </div>
+            <!-- <div id="selectedItem" class="blackbg">
+                <input type="image" class="itemSelect" src="/resources/img/characters/placeholder.jpg" value="staff">
+                <input type="image" class="itemSelect" src="/resources/img/characters/placeholder.jpg" value="dagger">
+                <input type="image" class="itemSelect" src="/resources/img/characters/placeholder.jpg" value="bow">
+                <input type="image" class="itemSelect" src="/resources/img/characters/placeholder.jpg" value="bow">
+            </div> -->
+        </div>
+        <div class="start"> <button id="startBtn">Start Game</button>
+        </div>
+        <div id="playField" class="playfield">
+            <div id="playerOrder" class="playerOrder">
+                <button class="name" id="playerName1"></button>
+                <button class="name" id="playerName2"></button>
+                <button class="name" id="playerName3"></button>
+            </div>
+            <div class="arena">
+                <div class="player" id="player1"></div>
+                <div class="player" id="player2"></div>
+                <div class="player" id="player3"></div>
+
+                <div class="enemy" id="enemy1"></div>
+                <div class="enemy" id="enemy2"></div>
+                <div class="enemy" id="enemy3"></div>
+            </div>
+            <div id="enemyOrder" class="enemyOrder">
+                <button class="enemyName" id="enemyName1"></button>
+                <button class="enemyName" id="enemyName2"></button>
+                <button class="enemyName" id="enemyName3"></button>
+            </div>
+        </div>
+        <div id="infoField">
+            <div id="menu" class="menu">
+                <button class="atkBtn" id="atkBtn"></button>
+                <br>
+                <button class="magBtn" id="magBtn"></button>
+                <br>
+                <button class="guardBtn" id="guardBtn"></button>
+            </div>
+            <div id="statField" class="statField"></div>
+        </div>
+        <script src="/resources/js/character.js"></script>
+        <script src="/resources/js/characterStats.js"></script>
+        <script src="/resources/js/enemies.js"></script>
+        <script src="/resources/js/stats.js"></script>
+        <script src="/resources/js/gameloop.js"></script>
+        <script src="/resources/js/savegame.js"></script>
+</body>
+
+</html>
