@@ -62,27 +62,27 @@ function generateLowLvlWave() {
         case 1:
             enemy1 = enemySlime;
             enemyName1.innerText = enemySlime.name;
-            enemyImg1.style.backgroundImage = "url(./resources/img/enemies/" + enemySlime.name + ".png)";
+            enemyImg1.style.backgroundImage = "url(/resources/img/enemies/" + enemySlime.name + ".png)";
             break;
         case 2:
             enemy1 = enemyPixie;
             enemyName1.innerText = enemyPixie.name;
-            enemyImg1.style.backgroundImage = "url(./resources/img/enemies/" + enemyPixie.name + ".png)";
+            enemyImg1.style.backgroundImage = "url(/resources/img/enemies/" + enemyPixie.name + ".png)";
             break;
         case 3:
             enemy1 = enemyMakami;
             enemyName1.innerText = enemyMakami.name;
-            enemyImg1.style.backgroundImage = "url(./resources/img/enemies/" + enemyMakami.name + ".png)";
+            enemyImg1.style.backgroundImage = "url(/resources/img/enemies/" + enemyMakami.name + ".png)";
             break;
         case 4:
             enemy1 = enemyKoropokkuru;
             enemyName1.innerText = enemyKoropokkuru.name;
-            enemyImg1.style.backgroundImage = "url(./resources/img/enemies/" + enemyKoropokkuru.name + ".png)";
+            enemyImg1.style.backgroundImage = "url(/resources/img/enemies/" + enemyKoropokkuru.name + ".png)";
             break;
         case 5:
             enemy1 = enemyPyrojack;
             enemyName1.innerText = enemyPyrojack.name;
-            enemyImg1.style.backgroundImage = "url(./resources/img/enemies/" + enemyPyrojack.name + ".png)";
+            enemyImg1.style.backgroundImage = "url(/resources/img/enemies/" + enemyPyrojack.name + ".png)";
             break;
     }
     switch (mob2) {
@@ -94,7 +94,7 @@ function generateLowLvlWave() {
                 enemy2 = enemySlime;
                 enemyName2.innerText = enemySlime.name;
             }
-            enemyImg2.style.backgroundImage = "url(./resources/img/enemies/" + enemySlime.name + ".png)";
+            enemyImg2.style.backgroundImage = "url(/resources/img/enemies/" + enemySlime.name + ".png)";
             break;
         case 2:
             if (enemy1 == enemyPixie) {
@@ -104,7 +104,7 @@ function generateLowLvlWave() {
                 enemy2 = enemyPixie;
                 enemyName2.innerText = enemyPixie.name;
             }
-            enemyImg2.style.backgroundImage = "url(./resources/img/enemies/" + enemyPixie.name + ".png)";
+            enemyImg2.style.backgroundImage = "url(/resources/img/enemies/" + enemyPixie.name + ".png)";
             break;
         case 3:
             if (enemy1 == enemyMakami) {
@@ -114,7 +114,7 @@ function generateLowLvlWave() {
                 enemy2 = enemyMakami;
                 enemyName2.innerText = enemyMakami.name;
             }
-            enemyImg2.style.backgroundImage = "url(./resources/img/enemies/" + enemyMakami.name + ".png)";
+            enemyImg2.style.backgroundImage = "url(/resources/img/enemies/" + enemyMakami.name + ".png)";
             break;
         case 4:
             if (enemy1 == enemyKoropokkuru) {
@@ -124,7 +124,7 @@ function generateLowLvlWave() {
                 enemy2 = enemyKoropokkuru;
                 enemyName2.innerText = enemyKoropokkuru.name;
             }
-            enemyImg2.style.backgroundImage = "url(./resources/img/enemies/" + enemyKoropokkuru.name + ".png)";
+            enemyImg2.style.backgroundImage = "url(/resources/img/enemies/" + enemyKoropokkuru.name + ".png)";
             break;
         case 5:
             if (enemy1 == enemyPyrojack) {
@@ -134,7 +134,7 @@ function generateLowLvlWave() {
                 enemy2 = enemyPyrojack;
                 enemyName2.innerText = enemyPyrojack.name;
             }
-            enemyImg2.style.backgroundImage = "url(./resources/img/enemies/" + enemyPyrojack.name + ".png)";
+            enemyImg2.style.backgroundImage = "url(/resources/img/enemies/" + enemyPyrojack.name + ".png)";
             break;
     }
     switch (mob3) {
@@ -152,7 +152,7 @@ function generateLowLvlWave() {
                 enemy3 = enemySlime;
                 enemyName3.innerText = enemySlime.name;
             }
-            enemyImg3.style.backgroundImage = "url(./resources/img/enemies/" + enemySlime.name + ".png)";
+            enemyImg3.style.backgroundImage = "url(/resources/img/enemies/" + enemySlime.name + ".png)";
             break;
         case 2:
             if (enemy1 == enemyPixie) {
@@ -168,7 +168,7 @@ function generateLowLvlWave() {
                 enemy3 = enemyPixie;
                 enemyName3.innerText = enemyPixie.name;
             }
-            enemyImg3.style.backgroundImage = "url(./resources/img/enemies/" + enemyPixie.name + ".png)";
+            enemyImg3.style.backgroundImage = "url(/resources/img/enemies/" + enemyPixie.name + ".png)";
             break;
         case 3:
             if (enemy1 == enemyMakami) {
@@ -184,7 +184,7 @@ function generateLowLvlWave() {
                 enemy3 = enemyMakami;
                 enemyName3.innerText = enemyMakami.name;
             }
-            enemyImg3.style.backgroundImage = "url(./resources/img/enemies/" + enemyMakami.name + ".png)";
+            enemyImg3.style.backgroundImage = "url(/resources/img/enemies/" + enemyMakami.name + ".png)";
             break;
         case 4:
             if (enemy1 == enemyKoropokkuru) {
@@ -200,7 +200,7 @@ function generateLowLvlWave() {
                 enemy3 = enemyKoropokkuru;
                 enemyName3.innerText = enemyKoropokkuru.name;
             }
-            enemyImg3.style.backgroundImage = "url(./resources/img/enemies/" + enemyKoropokkuru.name + ".png)";
+            enemyImg3.style.backgroundImage = "url(/resources/img/enemies/" + enemyKoropokkuru.name + ".png)";
             break;
         case 5:
             if (enemy1 == enemyPyrojack) {
@@ -216,7 +216,7 @@ function generateLowLvlWave() {
                 enemy3 = enemyPyrojack;
                 enemyName3.innerText = enemyPyrojack.name;
             }
-            enemyImg3.style.backgroundImage = "url(./resources/img/enemies/" + enemyPyrojack.name + ".png)";
+            enemyImg3.style.backgroundImage = "url(/resources/img/enemies/" + enemyPyrojack.name + ".png)";
             break;
     }
     holdEnemyInfo1 = enemy1;
