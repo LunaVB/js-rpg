@@ -160,7 +160,7 @@ function createChar() {
     }
     selectCharacters();
     //drawing the selected characters
-    playerImg1.style.backgroundImage = "url(/resources/img/characters/" + selectedTeam[0].name + ".png)";
-    playerImg2.style.backgroundImage = "url(/resources/img/characters/" + selectedTeam[1].name + ".png)";
-    playerImg3.style.backgroundImage = "url(/resources/img/characters/" + selectedTeam[2].name + ".png)";
+    playerImg1.style.backgroundImage = "url(./resources/img/characters/" + selectedTeam[0].name + ".png)";
+    playerImg2.style.backgroundImage = "url(./resources/img/characters/" + selectedTeam[1].name + ".png)";
+    playerImg3.style.backgroundImage = "url(./resources/img/characters/" + selectedTeam[2].name + ".png)";
 }
