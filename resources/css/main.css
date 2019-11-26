@@ -82,7 +82,7 @@
     border: 1px solid black;
     display: flex;
     justify-content: center;
-    background-image: url(./img/menu/BG.png);
+    background-image: url(../img/menu/BG.png);
     background-repeat: no-repeat;
     background-size: contain;
     border: 1px solid white;
@@ -176,7 +176,7 @@
 } */
 
 .atkBtn {
-    background-image: url(./img/menu/attack.jpg);
+    background-image: url(../img/menu/attack.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     width: 300px;
@@ -184,7 +184,7 @@
 }
 
 .magBtn {
-    background-image: url(./img/menu/skills.jpg);
+    background-image: url(../img/menu/skills.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     width: 300px;
@@ -192,7 +192,7 @@
 }
 
 .guardBtn {
-    background-image: url(./img/menu/guard.jpg);
+    background-image: url(../img/menu/guard.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     width: 300px;
