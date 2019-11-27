@@ -1,3 +1,14 @@
+@font-face {
+    font-family: "slumpstd";
+    src: url('../fonts/slumpstd.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: "slumpstd";
+}
+
 .field {
     display: flex;
     justify-content: center;
@@ -31,7 +42,7 @@
 }
 
 .playfield {
-    width: 58vw;
+    width: 70vw;
     height: 495px;
     margin: 10px;
     border: 2px solid black;
@@ -66,7 +77,17 @@
 }
 
 .skills {
-    width: 420px;
+    width: 297px;
+    height: 160px;
+    border: 1px solid white;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.descr {
+    width: 430px;
     height: 300px;
     border: 1px solid white;
     background-color: black;
@@ -84,7 +105,7 @@
 }
 
 .stats {
-    width: 46vw;
+    width: 58vw;
     height: 40px;
     border: 1px solid black;
     display: flex;
@@ -92,7 +113,7 @@
 
 .stats1,
 .stats2 {
-    width: 23vw;
+    width: 29vw;
     height: 40px;
     border: 1px solid black;
     display: flex;
@@ -105,14 +126,14 @@
 }
 
 .arena {
-    width: 68vw;
+    width: 70vw;
     height: 495px;
     border: 1px solid black;
     display: flex;
     justify-content: center;
     background-image: url(../img/menu/BG.png);
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: cover;
     border: 1px solid white;
 }
 
@@ -139,12 +160,16 @@
 .skill2,
 .skill3,
 .skill4,
-.skill5 {
+.skill5,
+.useSkill {
     width: 100%;
-    height: 30px;
+    height: 40px;
     border: 1px solid white;
     display: flex;
     flex-wrap: nowrap;
+    background-color: black;
+    color: white;
+    font-size: 25px;
 }
 
 .skillImg {
@@ -177,60 +202,58 @@
 }
 
 .player {
-    width: 250px;
+    width: 400px;
     height: 400px;
     margin: 5px;
-    /* border: 1px solid black; */
     background-size: contain;
     background-repeat: no-repeat;
 }
 
 .enemy {
-    width: 300px;
-    height: 450px;
+    width: 350px;
+    height: 350px;
     margin: 5px;
-    /* border: 1px solid black; */
     background-size: contain;
     background-repeat: no-repeat;
 }
 
 #player1 {
-    top: 245px;
-    left: 520px;
+    top: 220px;
+    left: 390px;
     position: absolute;
     z-index: 5;
 }
 
 #player2 {
-    top: 225px;
-    left: 600px;
+    top: 160px;
+    left: 500px;
     position: absolute;
     z-index: 4;
 }
 
 #player3 {
-    top: 205px;
-    left: 680px;
+    top: 140px;
+    left: 630px;
     position: absolute;
     z-index: 3;
 }
 
 #enemy1 {
-    top: 175px;
-    right: 500px;
+    top: 260px;
+    right: 300px;
     position: absolute;
     z-index: 5;
 }
 
 #enemy2 {
-    top: 155px;
-    right: 560px;
+    top: 240px;
+    right: 450px;
     position: absolute;
     z-index: 4;
 }
 
 #enemy3 {
-    top: 135px;
+    top: 220px;
     right: 620px;
     position: absolute;
     z-index: 3;

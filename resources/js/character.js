@@ -214,7 +214,6 @@ function createChar() {
                         playerImg2.style.backgroundImage = "url(./resources/img/characters/" + selectedTeam[1].name + "Thief.png)";
                         playerImg3.style.backgroundImage = "url(./resources/img/characters/" + selectedTeam[2].name + ".png)";
                         console.log(selectTeam);
-
                         skill1Img.style.backgroundImage = "url(./resources/img/skills/" + selectedTeam[1].moves[0].element + ".png)";
                         skill2Img.style.backgroundImage = "url(./resources/img/skills/" + selectedTeam[1].moves[1].element + ".png)";
                         skill3Img.style.backgroundImage = "url(./resources/img/skills/" + selectedTeam[1].moves[2].element + ".png)";
@@ -240,7 +239,6 @@ function createChar() {
                         playerImg2.style.backgroundImage = "url(./resources/img/characters/" + selectedTeam[1].name + ".png)";
                         playerImg3.style.backgroundImage = "url(./resources/img/characters/" + selectedTeam[2].name + "Thief.png)";
                         console.log(selectTeam);
-
                         skill1Img.style.backgroundImage = "url(./resources/img/skills/" + selectedTeam[2].moves[0].element + ".png)";
                         skill2Img.style.backgroundImage = "url(./resources/img/skills/" + selectedTeam[2].moves[1].element + ".png)";
                         skill3Img.style.backgroundImage = "url(./resources/img/skills/" + selectedTeam[2].moves[2].element + ".png)";

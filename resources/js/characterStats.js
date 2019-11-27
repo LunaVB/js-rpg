@@ -7,7 +7,7 @@ function Stats(name, move, itemStats, Skills, hp, maxhp, mana, speed, mainEle, w
     this.maxhp = maxhp;
     this.mana = mana;
     this.speed = speed;
-    this.mainElements = mainEle;
+    this.mainElement = mainEle;
     this.weakness = weakness;
 };
 
