@@ -1,7 +1,8 @@
-function Stats(name, move, itemStats, hp, maxhp, mana, speed, mainEle, weakness) {
+function Stats(name, move, itemStats, Skills, hp, maxhp, mana, speed, mainEle, weakness) {
     this.name = name;
     this.move = move;
     this.item = itemStats;
+    this.moves = Skills;
     this.hp = hp;
     this.maxhp = maxhp;
     this.mana = mana;
@@ -34,11 +35,11 @@ let knuckles = new itemStats("knuckles", "closeCombat", 10, 10, 10, 0, 15, 0, 0)
 let axe = new itemStats("axe", "midRange", 10, 10, 10, 0, 15, 0, 0);
 let blaster = new itemStats("blaster", "longRange", 10, 10, 10, 0, 15, 0, 0);
 
-charJoker = new Stats("joker", move, dagger, 100, 100, 50, 50, "eiha", "bless");
-charMona = new Stats("mona", move, slingshot, 100, 100, 50, 55, "garu", "zio");
-charSkull = new Stats("skull", move, bat, 100, 100, 50, 30, "zio", "garu");
-charPanther = new Stats("panther", move, whip, 100, 100, 50, 40, "agi", "bufu");
-charFox = new Stats("fox", move, katana, 100, 100, 50, 60, "bufu", "agi");
-charQueen = new Stats("queen", move, knuckles, 100, 100, 50, 45, "nuke", "psi");
-charNoir = new Stats("noir", move, axe, 100, 100, 50, 30, "psi", "nuke");
-charCrow = new Stats("crow", move, blaster, 100, 100, 50, 35, "bless", "eiha");
+charJoker = new Stats("joker", move, dagger, jokerSkills, 100, 100, 50, 50, "curse", "bless");
+charMona = new Stats("mona", move, slingshot, monaSkills, 100, 100, 50, 55, "wind", "elec");
+charSkull = new Stats("skull", move, bat, skullSkills, 100, 100, 50, 30, "elec", "wind");
+charPanther = new Stats("panther", move, monaSkills, whip, 100, 100, 50, 40, "fire", "ice");
+charFox = new Stats("fox", move, katana, monaSkills, 100, 100, 50, 60, "ice", "fire");
+charQueen = new Stats("queen", move, knuckles, monaSkills, 100, 100, 50, 45, "nuke", "psi");
+charNoir = new Stats("noir", move, axe, monaSkills, 100, 100, 50, 30, "psi", "nuke");
+charCrow = new Stats("crow", move, blaster, monaSkills, 100, 100, 50, 35, "bless", "curse");

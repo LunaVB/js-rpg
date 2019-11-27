@@ -3,9 +3,10 @@ A javascript RPG based on the Persona franchise
 link [here](https://lunavb.github.io/js-rpg/rpg.html)
 
 <h3>TO DO</h3>
-1. hold proper info in holdTeamInfo and holdEnemyInfo after making a move (stats//calcHits).</br>
-2. calulate guard.</br>
-3. decide order of attacks, atm I can't seem to get the speed values back to the character objects after sorting them.</br>
+1. skills SKILLS SKIIIIIILLS shit
+2. hold proper info in holdTeamInfo and holdEnemyInfo after making a move (stats//calcHits).</br>
+3. calulate guard for player characters.</br>
+4. decide order of attacks, atm I can't seem to get the speed values back to the character objects after sorting them.</br>
 
 <h3>DONE</h3>
 1. disable selects when pressing play button.</br>

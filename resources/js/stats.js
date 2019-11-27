@@ -95,15 +95,15 @@ startBtn.addEventListener("click", function () {
         }
     })
     magBtn.addEventListener("click", function () {
-        if (selectTeam == undefined && selectEnemy == undefined) {
-            console.log("please select team member and enemy")
-        } else {
-            magChosen = true;
-            playerMoveMade();
-            enemyDeath();
-            enemyMove();
-            enemyMoveMade();
-        }
+        /*  if (selectTeam == undefined && selectEnemy == undefined) {
+              console.log("please select team member and enemy")
+          } else {
+              magChosen = true;
+              playerMoveMade();
+              enemyDeath();
+              enemyMove();
+              enemyMoveMade();
+          } */
     })
 })
 
@@ -148,7 +148,7 @@ function enemyMove() {
                 doubleHit = 1;
             }
         }
-        let enemyMoveRNG = Math.floor(Math.random() * (3 - 1 + 1)) + 1;
+        let enemyMoveRNG = Math.floor(Math.random() * (2 - 1 + 1)) + 1;
         let enemyNormalDmg;
         let enemyBuffedDmg;
         let enemyfinalDmg;
@@ -171,11 +171,6 @@ function enemyMove() {
                 playerHp -= enemyfinalDmg;
                 //console.log("base damage from item: " + enemyBaseDmg + "\n" + "player physical resistance from item: " + playerPhysRes + "%" + "\n" + "normal damage done: " + enemyNormalDmg + "\n" + "damage after enemy buff calc: " + enemyBuffedDmg + "\n" + "Final damage after double hit check: " + enemyfinalDmg + "\n" + playerN + " has " + playerHp + " HP left");
                 statField.innerText += enemyfinalDmg + " damage dealt. " + playerN + " has " + playerHp + " hp left." + "\n"
-                break;
-            case 3:
-                calcDoubleHit();
-                //console.log("enemy guarded")
-                statField.innerText += enemyName + " guards." + "\n"
                 break;
         }
 
