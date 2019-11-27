@@ -193,12 +193,14 @@ function createChar() {
                         skill2Img.style.backgroundImage = "url(./resources/img/skills/" + selectedTeam[0].moves[1].element + ".png)";
                         skill3Img.style.backgroundImage = "url(./resources/img/skills/" + selectedTeam[0].moves[2].element + ".png)";
                         skill4Img.style.backgroundImage = "url(./resources/img/skills/" + selectedTeam[0].moves[3].element + ".png)";
+                        skill5Img.style.backgroundImage = "url(./resources/img/skills/" + selectedTeam[0].moves[4].element + ".png)";
 
                         //skillnames
                         skillName1.innerHTML = selectedTeam[0].moves[0].name;
                         skillName2.innerHTML = selectedTeam[0].moves[1].name;
                         skillName3.innerHTML = selectedTeam[0].moves[2].name;
                         skillName4.innerHTML = selectedTeam[0].moves[3].name;
+                        skillName5.innerHTML = selectedTeam[0].moves[4].name;
                         break;
                     case teamBtnArr[1]:
                         teamBtnArr[1].classList.add("selected");
@@ -217,12 +219,14 @@ function createChar() {
                         skill2Img.style.backgroundImage = "url(./resources/img/skills/" + selectedTeam[1].moves[1].element + ".png)";
                         skill3Img.style.backgroundImage = "url(./resources/img/skills/" + selectedTeam[1].moves[2].element + ".png)";
                         skill4Img.style.backgroundImage = "url(./resources/img/skills/" + selectedTeam[1].moves[3].element + ".png)";
+                        skill5Img.style.backgroundImage = "url(./resources/img/skills/" + selectedTeam[1].moves[4].element + ".png)";
 
                         //skillnames
                         skillName1.innerHTML = selectedTeam[1].moves[0].name;
                         skillName2.innerHTML = selectedTeam[1].moves[1].name;
                         skillName3.innerHTML = selectedTeam[1].moves[2].name;
                         skillName4.innerHTML = selectedTeam[1].moves[3].name;
+                        skillName5.innerHTML = selectedTeam[1].moves[4].name;
                         break;
                     case teamBtnArr[2]:
                         teamBtnArr[2].classList.add("selected");
@@ -241,12 +245,14 @@ function createChar() {
                         skill2Img.style.backgroundImage = "url(./resources/img/skills/" + selectedTeam[2].moves[1].element + ".png)";
                         skill3Img.style.backgroundImage = "url(./resources/img/skills/" + selectedTeam[2].moves[2].element + ".png)";
                         skill4Img.style.backgroundImage = "url(./resources/img/skills/" + selectedTeam[2].moves[3].element + ".png)";
+                        skill5Img.style.backgroundImage = "url(./resources/img/skills/" + selectedTeam[2].moves[4].element + ".png)";
 
                         //skillnames
                         skillName1.innerHTML = selectedTeam[2].moves[0].name;
                         skillName2.innerHTML = selectedTeam[2].moves[1].name;
                         skillName3.innerHTML = selectedTeam[2].moves[2].name;
                         skillName4.innerHTML = selectedTeam[2].moves[3].name;
+                        skillName5.innerHTML = selectedTeam[2].moves[4].name;
                         break;
                 }
             });

@@ -229,7 +229,6 @@ function generateLowLvlWave() {
     document.getElementById("healthEnemy3").max = holdEnemyInfo3.maxhp;
 
     statField.innerText += "\n" + "*----- NEW WAVE SPAWNED -----*" + "\n ";
-
     statField.innerText += enemy1.name + ", " + enemy2.name + " and " + enemy3.name + " have spawned" + "\n";
 
 }
