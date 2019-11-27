@@ -1,4 +1,4 @@
-/* ----- ALL DAMAGE CALCULATIONS ----- */
+/* -------------------- ALL DAMAGE CALCULATIONS -------------------- */
 function calcDamage() {
 
     /* ----- EVASION CHANCE (DODGE CHANCE) -----*/
@@ -20,10 +20,10 @@ function calcDamage() {
     /* ----- ELEMENT CALCULATIONS -----*/
     /*  
         These elements do double damage to each other
-                FIRE <==> ICE
-                WIND <==> ELEC
-                NUKE <==> PSY
-                BLESS <==> CURSE
+                FIRE  <==>  ICE
+                WIND  <==>  ELEC
+                NUKE  <==>  PSY
+                BLESS <==>  CURSE
     */
 
     function calcElement() {}
@@ -38,6 +38,50 @@ function calcDamage() {
     */
 
     function calcFinalDamage() {}
+}
+
+/* -------------------- ENEMY FUNCTIONS -------------------- */
+function enemy() {
+
+    /* ----- ENEMY TURN RNG -----*/
+    /* generates either a 1 or 2
+       if 1 the enemy will use a normal attack
+       if 2 the enemy will use a skill 
+    */
+
+    function enemyTurn() {}
+
+    /* ----- ENEMY DESPAWN -----*/
+    /* if an enemy's HP hits 0 or below
+       despawns enemy and clears enemy data
+    */
+    function enemyDespawn() {}
+
+}
+/* -------------------- SAVING STATS -------------------- */
+function saveStats() {
+
+    /* ----- STORE STATS -----*/
+    /*  stores teammate and enemy stats after an attack
+     */
+
+    function storeStats() {}
+
+    /* ----- DISABLE TEAMMATE BUTTON -----*/
+    /*  whenever a teammate has finished their turn
+        their button is disabled as to "end" their turn
+        and make it impossible to select them until the next round
+    */
+
+    function disableTeamButton() {}
+
+    /* ----- RESET ROUND -----*/
+    /*  re-enables teammate buttons on round reset
+     */
+
+    function roundReset() {}
+
+}
 
 
 
