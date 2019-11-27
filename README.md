@@ -1,9 +1,9 @@
 # js-rpg
-A javascript RPG based on the Persona franchise
+A javascript RPG based on the Persona franchise</br>
 link [here](https://lunavb.github.io/js-rpg/rpg.html)
 
 <h3>TO DO</h3>
-1. restructure game loop and functions</br>
+1. restructure game loop and functions + comment</br>
 2. redo damage and magic damage calculation</br>
 3. make all team member skills functional</br>
 4. hold proper info in holdTeamInfo and holdEnemyInfo after making a move (stats//calcHits).</br>
@@ -43,14 +43,14 @@ enemy HP bars don't reset after new wave spawns.</br>
 23. draw hp and mana to screen + update after every attack.</br>
 24. give all teammembers at least 4 skills </br>
 
-<h2>IDEAS: <h2>
-<h3>LEVELS: <h3>
+<h2>IDEAS: </h2>
+<h3>LEVELS: </h3>
 save state.</br>
 3 players VS enemy waves.</br>
 every player has weaknesses/strengths/elemental spells/physical skills/buffs.</br>
 weapon types have strengths/weaknesses (?).</br>
 
-<h3>ENEMIES: <h3>
+<h3>ENEMIES: </h3>
 make several enemy classes (auto-scale).</br>
 boss every 5 waves (bosses autoscale).</br>
 
