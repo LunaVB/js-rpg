@@ -77,13 +77,16 @@ body {
 }
 
 .skills {
-    width: 297px;
+    width: 295px;
     height: 160px;
     border: 1px solid white;
     background-color: black;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    cursor: pointer;
 }
 
 .descr {
@@ -160,16 +163,25 @@ body {
 .skill2,
 .skill3,
 .skill4,
-.skill5,
-.useSkill {
-    width: 100%;
-    height: 40px;
-    border: 1px solid white;
+.skill5 {
     display: flex;
     flex-wrap: nowrap;
     background-color: black;
     color: white;
+    width: 100%;
+    height: 40px;
+    border: 1px solid white;
+
+}
+
+.useSkill {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    background-color: black;
+    color: white;
     font-size: 25px;
+    text-align: center;
 }
 
 .skillImg {
@@ -181,7 +193,6 @@ body {
     background-repeat: no-repeat;
 }
 
-
 .skillName {
     width: 85%;
     height: 30px;
@@ -190,7 +201,6 @@ body {
     font-size: 25px;
     padding-left: 20px;
 }
-
 
 .itemSelect,
 .charSelect {
@@ -226,35 +236,35 @@ body {
 
 #player2 {
     top: 160px;
-    left: 500px;
+    left: 460px;
     position: absolute;
     z-index: 4;
 }
 
 #player3 {
     top: 140px;
-    left: 630px;
+    left: 600px;
     position: absolute;
     z-index: 3;
 }
 
 #enemy1 {
-    top: 260px;
-    right: 300px;
+    top: 250px;
+    right: 385px;
     position: absolute;
     z-index: 5;
 }
 
 #enemy2 {
-    top: 240px;
-    right: 450px;
+    top: 230px;
+    right: 490px;
     position: absolute;
     z-index: 4;
 }
 
 #enemy3 {
-    top: 220px;
-    right: 620px;
+    top: 210px;
+    right: 530px;
     position: absolute;
     z-index: 3;
 }

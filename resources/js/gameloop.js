@@ -3,26 +3,28 @@ startBtn.addEventListener("click", function gameLoop() {
     generateLowLvlWave();
 });
 
-function enemy() {
-    enemyTarget();
-    enemyTurn();
-}
-
-function damage() {
-    calcDamage();
-}
-
-
-
+let physChosen;
+let magChosen;
+let guardChosen;
+let guardBtn = document.getElementById("guardBtn");
+let atkBtn = document.getElementById("atkBtn");
+let skillBtn = document.getElementById("useSkill");
 
 startBtn.addEventListener("click", function () {
-
+    let playerSkillArr = [skill1, skill2, skill3, skill4, skill5];
+    console.log(playerSkillArr);
+    for (var i = 0; i < playerSkillArr.length; i++) {
+        playerSkillArr[i].addEventListener("click", function () {})
+    }
     atkBtn.addEventListener("click", function () {
         if (selectTeam == undefined && selectEnemy == undefined) {
             console.log("please select team member and enemy")
         } else {
             physChosen = true;
-            damage();
+            calcDamage();
         }
     })
+
+    skillBtn.addEventListener("click", function () {})
+
 })

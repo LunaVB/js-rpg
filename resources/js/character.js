@@ -39,6 +39,12 @@ let skillName3 = document.getElementById("skillName3");
 let skillName4 = document.getElementById("skillName4");
 let skillName5 = document.getElementById("skillName5");
 
+let skill1 = document.getElementById("skill1");
+let skill2 = document.getElementById("skill2");
+let skill3 = document.getElementById("skill3");
+let skill4 = document.getElementById("skill4");
+let skill5 = document.getElementById("skill5");
+
 let move;
 let selectTeam;
 let selectEnemy;
@@ -184,11 +190,13 @@ function createChar() {
                         selectTeam = holdTeamInfo1;
                         healthPlayer1Max = holdTeamInfo1.maxhp;
                         healthPlayer1 = holdTeamInfo1.hp;
+                        playerSkills = selectTeam.moves;
                         playerImg1.style.backgroundImage = "url(./resources/img/characters/" + selectedTeam[0].name + "Thief.png)";
                         playerImg2.style.backgroundImage = "url(./resources/img/characters/" + selectedTeam[1].name + ".png)";
                         playerImg3.style.backgroundImage = "url(./resources/img/characters/" + selectedTeam[2].name + ".png)";
                         console.log(selectTeam);
 
+                        //skill images
                         skill1Img.style.backgroundImage = "url(./resources/img/skills/" + selectedTeam[0].moves[0].element + ".png)";
                         skill2Img.style.backgroundImage = "url(./resources/img/skills/" + selectedTeam[0].moves[1].element + ".png)";
                         skill3Img.style.backgroundImage = "url(./resources/img/skills/" + selectedTeam[0].moves[2].element + ".png)";
@@ -210,6 +218,7 @@ function createChar() {
                         selectTeam = holdTeamInfo2;
                         healthPlayer2Max = holdTeamInfo2.maxhp;
                         healthPlayer2 = holdTeamInfo2.hp;
+                        playerSkills = selectTeam.moves;
                         playerImg1.style.backgroundImage = "url(./resources/img/characters/" + selectedTeam[0].name + ".png)";
                         playerImg2.style.backgroundImage = "url(./resources/img/characters/" + selectedTeam[1].name + "Thief.png)";
                         playerImg3.style.backgroundImage = "url(./resources/img/characters/" + selectedTeam[2].name + ".png)";
@@ -235,6 +244,7 @@ function createChar() {
                         selectTeam = holdTeamInfo3;
                         healthPlayer3Max = holdTeamInfo3.maxhp;
                         healthPlayer3 = holdTeamInfo3.hp;
+                        playerSkills = selectTeam.moves;
                         playerImg1.style.backgroundImage = "url(./resources/img/characters/" + selectedTeam[0].name + ".png)";
                         playerImg2.style.backgroundImage = "url(./resources/img/characters/" + selectedTeam[1].name + ".png)";
                         playerImg3.style.backgroundImage = "url(./resources/img/characters/" + selectedTeam[2].name + "Thief.png)";
