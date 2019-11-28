@@ -39,11 +39,17 @@ let skillName3 = document.getElementById("skillName3");
 let skillName4 = document.getElementById("skillName4");
 let skillName5 = document.getElementById("skillName5");
 
-let skill1 = document.getElementById("skill1");
-let skill2 = document.getElementById("skill2");
-let skill3 = document.getElementById("skill3");
-let skill4 = document.getElementById("skill4");
-let skill5 = document.getElementById("skill5");
+let skilldiv1 = document.getElementById("skill1");
+let skilldiv2 = document.getElementById("skill2");
+let skilldiv3 = document.getElementById("skill3");
+let skilldiv4 = document.getElementById("skill4");
+let skilldiv5 = document.getElementById("skill5");
+
+let skill1;
+let skill2;
+let skill3;
+let skill4;
+let skill5;
 
 let move;
 let selectTeam;
@@ -195,6 +201,12 @@ function createChar() {
                         playerImg2.style.backgroundImage = "url(./resources/img/characters/" + selectedTeam[1].name + ".png)";
                         playerImg3.style.backgroundImage = "url(./resources/img/characters/" + selectedTeam[2].name + ".png)";
                         console.log(selectTeam);
+                        //skills
+                        skill1 = selectTeam.moves[0];
+                        skill2 = selectTeam.moves[1];
+                        skill3 = selectTeam.moves[2];
+                        skill4 = selectTeam.moves[3];
+                        skill5 = selectTeam.moves[4];
 
                         //skill images
                         skill1Img.style.backgroundImage = "url(./resources/img/skills/" + selectedTeam[0].moves[0].element + ".png)";
@@ -223,6 +235,14 @@ function createChar() {
                         playerImg2.style.backgroundImage = "url(./resources/img/characters/" + selectedTeam[1].name + "Thief.png)";
                         playerImg3.style.backgroundImage = "url(./resources/img/characters/" + selectedTeam[2].name + ".png)";
                         console.log(selectTeam);
+                        //skills
+                        skill1 = selectTeam.moves[0];
+                        skill2 = selectTeam.moves[1];
+                        skill3 = selectTeam.moves[2];
+                        skill4 = selectTeam.moves[3];
+                        skill5 = selectTeam.moves[4];
+
+                        //skill images
                         skill1Img.style.backgroundImage = "url(./resources/img/skills/" + selectedTeam[1].moves[0].element + ".png)";
                         skill2Img.style.backgroundImage = "url(./resources/img/skills/" + selectedTeam[1].moves[1].element + ".png)";
                         skill3Img.style.backgroundImage = "url(./resources/img/skills/" + selectedTeam[1].moves[2].element + ".png)";
@@ -249,6 +269,14 @@ function createChar() {
                         playerImg2.style.backgroundImage = "url(./resources/img/characters/" + selectedTeam[1].name + ".png)";
                         playerImg3.style.backgroundImage = "url(./resources/img/characters/" + selectedTeam[2].name + "Thief.png)";
                         console.log(selectTeam);
+                        //skills
+                        skill1 = selectTeam.moves[0];
+                        skill2 = selectTeam.moves[1];
+                        skill3 = selectTeam.moves[2];
+                        skill4 = selectTeam.moves[3];
+                        skill5 = selectTeam.moves[4];
+
+                        //skill images
                         skill1Img.style.backgroundImage = "url(./resources/img/skills/" + selectedTeam[2].moves[0].element + ".png)";
                         skill2Img.style.backgroundImage = "url(./resources/img/skills/" + selectedTeam[2].moves[1].element + ".png)";
                         skill3Img.style.backgroundImage = "url(./resources/img/skills/" + selectedTeam[2].moves[2].element + ".png)";
@@ -267,6 +295,8 @@ function createChar() {
         }
     }
     selectCharacters();
+
+
     //drawing the selected characters
     playerImg1.style.backgroundImage = "url(./resources/img/characters/" + selectedTeam[0].name + ".png)";
     playerImg2.style.backgroundImage = "url(./resources/img/characters/" + selectedTeam[1].name + ".png)";

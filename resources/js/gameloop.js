@@ -10,11 +10,12 @@ let guardBtn = document.getElementById("guardBtn");
 let atkBtn = document.getElementById("atkBtn");
 let skillBtn = document.getElementById("useSkill");
 
+
 startBtn.addEventListener("click", function () {
-    let playerSkillArr = [skill1, skill2, skill3, skill4, skill5];
-    console.log(playerSkillArr);
-    for (var i = 0; i < playerSkillArr.length; i++) {
-        playerSkillArr[i].addEventListener("click", function () {})
+    let playerSkillDivArr = [skilldiv1, skilldiv2, skilldiv3, skilldiv4, skilldiv5];
+    console.log(playerSkillDivArr);
+    for (var i = 0; i < playerSkillDivArr.length; i++) {
+        playerSkillDivArr[i].addEventListener("click", function () {})
     }
     atkBtn.addEventListener("click", function () {
         if (selectTeam == undefined && selectEnemy == undefined) {

@@ -94,19 +94,15 @@ function calcDamage() {
         enemyHp -= finalDmg;
         statField.innerText += selectTeam.name + " has dealt " + finalDmg + " damage. " + selectEnemy.name + " has " + enemyHp + " hp left." + "\n"
         enemyHP = enemyHp;
+        storeStats()
     }
-    enemy()
 }
-
-
-
 
 function enemy() {
     /* -------------------- ENEMY FUNCTIONS -------------------- */
     enemyTarget()
     enemyTurn();
     enemyDespawn();
-
     /* ----- ENEMY TARGET RNG -----*/
     /* generates either a number between 0-2
        to decide which player to attack*/
@@ -190,10 +186,16 @@ function enemy() {
         /* ----- REASSIGN TARGETED PLAYER HP -----*/
         /* HP value is returned to the proper character previously targeted by an enemy*/
         enemyTarget.hp = enemyTargetHp;
+        holdTeamInfo1;
+        holdTeamInfo2;
+        holdTeamInfo3;
         let playerOrderCh = playerOrder.children;
         let playerOrderArr = Array.prototype.slice.call(playerOrderCh);
         for (let i = 0; i < 3; i++) {
             if (playerOrderArr[i].firstChild.data === enemyTarget.name) {
+                console.log(holdTeamInfo1);
+                console.log(holdTeamInfo2);
+                console.log(holdTeamInfo1);
                 switch (i) {
                     case 0:
                         holdTeamInfo1.hp = enemyTarget.hp;
@@ -216,9 +218,6 @@ function enemy() {
                 }
             }
         }
-
-        storeStats()
-
     }
     /* ----- ENEMY DESPAWN -----*/
     /* if an enemy's HP hits 0 or below
@@ -352,6 +351,7 @@ function storeStats() {
         playerOrderCh = playerOrder.children;
         playerOrderArr = Array.prototype.slice.call(playerOrderCh);
         teamMadeMove += 1;
+        console.log(teamMadeMove)
         if (teamMadeMove === 3) {
             // roundNumber += 1;
             console.log("round ended. resetting buttons");
@@ -361,6 +361,7 @@ function storeStats() {
                 playerName2.classList.remove("selected");
                 playerName3.classList.remove("selected");
             }
+            enemy();
         }
         if (teamMadeMove > 3) {
             teamMadeMove = 1;
