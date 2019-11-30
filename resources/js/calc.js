@@ -95,6 +95,7 @@ function calcDamage() {
         statField.innerText += selectTeam.name + " has dealt " + finalDmg + " damage. " + selectEnemy.name + " has " + enemyHp + " hp left." + "\n"
         enemyHP = enemyHp;
         storeStats()
+        enemy()
     }
 }
 
@@ -134,7 +135,6 @@ function enemy() {
                 enemyTarget = selectedTeam[2];
                 break;
         }
-        statField.innerText += enemyName + "'s turn. ";
         enemyTargetHp = playerHp;
         playerPHYSRES = playerPhysRes;
         playerNAME = playerN;
@@ -165,23 +165,28 @@ function enemy() {
         enemyMagBuff = selectEnemy.item.magic;
         console.log(enemyTargetHp)
         console.log(enemyTarget)
-        switch (enemyMoveRNG) {
-            case 1:
-                enemyNormalDmg = Math.floor(enemyBaseDmg - ((enemyBaseDmg * enemyPhysRes) / 100));
-                enemyBuffedDmg = Math.floor(enemyNormalDmg + ((enemyNormalDmg * physBuff) / 100));
-                enemyfinalDmg = enemyBuffedDmg * doubleHit;
-                enemyTargetHp -= enemyfinalDmg;
-                //console.log("base damage from item: " + enemyBaseDmg + "\n" + "player physical resistance from item: " + playerPhysRes + "%" + "\n" + "normal damage done: " + enemyNormalDmg + "\n" + "damage after enemy buff calc: " + enemyBuffedDmg + "\n" + "Final damage after double hit check: " + enemyfinalDmg + "\n" + playerN + " has " + playerHp + " HP left");
-                statField.innerText += enemyfinalDmg + " damage dealt. " + playerN + " has " + enemyTargetHp + " hp left." + "\n"
-                break;
-            case 2:
-                enemyNormalDmg = Math.floor(enemyBaseDmg - ((enemyBaseDmg * enemyMagRes) / 100));
-                enemyBuffedDmg = Math.floor(enemyNormalDmg + ((enemyNormalDmg * magBuff) / 100));
-                enemyfinalDmg = enemyBuffedDmg * doubleHit;
-                enemyTargetHp -= enemyfinalDmg;
-                //console.log("base damage from item: " + enemyBaseDmg + "\n" + "player physical resistance from item: " + playerPhysRes + "%" + "\n" + "normal damage done: " + enemyNormalDmg + "\n" + "damage after enemy buff calc: " + enemyBuffedDmg + "\n" + "Final damage after double hit check: " + enemyfinalDmg + "\n" + playerN + " has " + playerHp + " HP left");
-                statField.innerText += enemyfinalDmg + " damage dealt. " + playerN + " has " + enemyTargetHp + " hp left." + "\n"
-                break;
+        if (selectEnemy.hp >= 1) {
+            statField.innerText += enemyName + "'s turn. ";
+            switch (enemyMoveRNG) {
+                case 1:
+                    enemyNormalDmg = Math.floor(enemyBaseDmg - ((enemyBaseDmg * enemyPhysRes) / 100));
+                    enemyBuffedDmg = Math.floor(enemyNormalDmg + ((enemyNormalDmg * physBuff) / 100));
+                    enemyfinalDmg = enemyBuffedDmg * doubleHit;
+                    enemyTargetHp -= enemyfinalDmg;
+                    //console.log("base damage from item: " + enemyBaseDmg + "\n" + "player physical resistance from item: " + playerPhysRes + "%" + "\n" + "normal damage done: " + enemyNormalDmg + "\n" + "damage after enemy buff calc: " + enemyBuffedDmg + "\n" + "Final damage after double hit check: " + enemyfinalDmg + "\n" + playerN + " has " + playerHp + " HP left");
+                    statField.innerText += enemyfinalDmg + " damage dealt. " + playerN + " has " + enemyTargetHp + " hp left." + "\n"
+                    break;
+                case 2:
+                    enemyNormalDmg = Math.floor(enemyBaseDmg - ((enemyBaseDmg * enemyMagRes) / 100));
+                    enemyBuffedDmg = Math.floor(enemyNormalDmg + ((enemyNormalDmg * magBuff) / 100));
+                    enemyfinalDmg = enemyBuffedDmg * doubleHit;
+                    enemyTargetHp -= enemyfinalDmg;
+                    //console.log("base damage from item: " + enemyBaseDmg + "\n" + "player physical resistance from item: " + playerPhysRes + "%" + "\n" + "normal damage done: " + enemyNormalDmg + "\n" + "damage after enemy buff calc: " + enemyBuffedDmg + "\n" + "Final damage after double hit check: " + enemyfinalDmg + "\n" + playerN + " has " + playerHp + " HP left");
+                    statField.innerText += enemyfinalDmg + " damage dealt. " + playerN + " has " + enemyTargetHp + " hp left." + "\n"
+                    break;
+            }
+        } else {
+            console.log("selected enemy is dead")
         }
         /* ----- REASSIGN TARGETED PLAYER HP -----*/
         /* HP value is returned to the proper character previously targeted by an enemy*/

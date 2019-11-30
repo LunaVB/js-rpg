@@ -223,10 +223,15 @@ function generateLowLvlWave() {
     }
     holdEnemyInfo1 = enemy1;
     document.getElementById("healthEnemy1").max = holdEnemyInfo1.maxhp;
+    document.getElementById("healthEnemy1").value = holdEnemyInfo1.hp;
     holdEnemyInfo2 = enemy2;
     document.getElementById("healthEnemy2").max = holdEnemyInfo2.maxhp;
+    document.getElementById("healthEnemy2").value = holdEnemyInfo2.hp;
+
     holdEnemyInfo3 = enemy3;
     document.getElementById("healthEnemy3").max = holdEnemyInfo3.maxhp;
+    document.getElementById("healthEnemy3").value = holdEnemyInfo3.hp;
+
 
     statField.innerText += "\n" + "*----- NEW WAVE SPAWNED -----*" + "\n ";
     statField.innerText += enemy1.name + ", " + enemy2.name + " and " + enemy3.name + " have spawned" + "\n";
