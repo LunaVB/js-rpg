@@ -52,6 +52,7 @@ let skill2;
 let skill3;
 let skill4;
 let skill5;
+let selectSkill;
 let skillArr;
 let descr = document.getElementById("#descr");
 
@@ -212,8 +213,6 @@ function createChar() {
                         playerImg3.style.backgroundImage = "url(./resources/img/characters/" + selectedTeam[2].name + ".png)";
 
                         //deselect skills from other characters                        
-                        console.log("redefine skills")
-
                         skillArr = [skilldiv1, skilldiv2, skilldiv3, skilldiv4, skilldiv5];
                         skillArr[0].classList.remove("selected");
                         skillArr[1].classList.remove("selected");
@@ -262,8 +261,6 @@ function createChar() {
                         console.log(selectTeam);
 
                         //deselect skills from other characters                        
-                        console.log("redefine skills")
-
                         skillArr = [skilldiv1, skilldiv2, skilldiv3, skilldiv4, skilldiv5];
                         skillArr[0].classList.remove("selected");
                         skillArr[1].classList.remove("selected");
@@ -312,7 +309,6 @@ function createChar() {
                         console.log(selectTeam);
 
                         //deselect skills from other characters
-                        console.log("redefine skills")
                         skillArr = [skilldiv1, skilldiv2, skilldiv3, skilldiv4, skilldiv5];
                         skillArr[0].classList.remove("selected");
                         skillArr[1].classList.remove("selected");
@@ -366,6 +362,7 @@ function selectSkills() {
                     skillArr[3].classList.remove("selected");
                     skillArr[4].classList.remove("selected");
                     skill1 = selectTeam.moves[0];
+                    selectSkill = skill1;
                     descr += "Skill description";
                     break;
                 case skillArr[1]:
@@ -375,6 +372,7 @@ function selectSkills() {
                     skillArr[3].classList.remove("selected");
                     skillArr[4].classList.remove("selected");
                     skill1 = selectTeam.moves[1];
+                    selectSkill = skill2;
                     break;
                 case skillArr[2]:
                     skillArr[2].classList.add("selected");
@@ -383,6 +381,7 @@ function selectSkills() {
                     skillArr[3].classList.remove("selected");
                     skillArr[4].classList.remove("selected");
                     skill1 = selectTeam.moves[2];
+                    selectSkill = skill3;
                     break;
                 case skillArr[3]:
                     skillArr[3].classList.add("selected");
@@ -391,6 +390,7 @@ function selectSkills() {
                     skillArr[0].classList.remove("selected");
                     skillArr[4].classList.remove("selected");
                     skill1 = selectTeam.moves[3];
+                    selectSkill = skill4;
                     break;
                 case skillArr[4]:
                     skillArr[4].classList.add("selected");
@@ -399,6 +399,7 @@ function selectSkills() {
                     skillArr[3].classList.remove("selected");
                     skillArr[0].classList.remove("selected");
                     skill1 = selectTeam.moves[4];
+                    selectSkill = skill5;
                     break;
             }
         })

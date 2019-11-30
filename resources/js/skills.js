@@ -6,11 +6,48 @@ function Skills(name, type, element, damage, mana, duration, amountAffected, hea
     this.manacost = mana;
     this.duration = duration;
     this.amountAffected = amountAffected;
-    this.healthrestore = healthRestore;
+    this.healthRestore = healthRestore;
     this.effect = effect;
     this.effectAmount = effectAmount;
     this.description = descr;
 };
+/*var spellObject;
+
+spellObject = {
+    dia: {
+        spellName: "Dia",
+        nameId: "#dia",
+        element: "heal",
+        healthCost: 0,
+        manaCost: 3,
+        healthrestore: 25,
+        targetAmount: 1,
+        description: "light heal for one team member",
+        spellFunction: "none",
+    },
+    media: {
+        spellName: "Media",
+        nameId: "#media",
+        element: "heal",
+        healthCost: 0,
+        manaCost: 7,
+        healthrestore: 25,
+        targetAmount: 3,
+        description: "light heal for all team members",
+        spellFunction: "none",
+    },
+    luckyPunch: {
+        spellName: "Lucky Punch",
+        nameId: "#luckypunch",
+        element: "phys",
+        healthCost: 6,
+        manaCost: 0,
+        healthrestore: 25,
+        targetAmount: 3,
+        description: "miniscule physical damage to one foe, medium chance to crit",
+        spellFunction: "none",
+    },
+}*/
 /* Joker's skills */
 let eiha = new Skills("Eiha", "attack", "curse", 15, 4, 1, 1, 0, "none", 0, "light curse damage to one foe");
 let cleave = new Skills("Cleave", "attack", "phys", 12, 6, 1, 1, 0, "none", 0, "light physical damage to one foe");

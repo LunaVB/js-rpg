@@ -4,12 +4,12 @@ link [here](https://lunavb.github.io/js-rpg/rpg.html)
 
 <h3>TO DO</h3>
 1. restructure game loop and functions + comment</br>
-2. redo magic calculations</br>
 3. make all team member skills functional</br>
 5. calulate guard for player characters.</br>
 6. properly calculate mana use </br>
 7. decide order of attacks, atm I can't seem to get the speed values back to the character objects after sorting them.</br>
 8. skills for enemies </br>
+9. properly set skill requirements</br>
 
 <h3>BUGS</h3>
 1. characters can be deselected after game start (only visually).</br>
@@ -43,6 +43,7 @@ link [here](https://lunavb.github.io/js-rpg/rpg.html)
 25. hold proper info in holdTeamInfo and holdEnemyInfo after making a move (stats//calcHits).</br>
 26. redo damage and magic damage calculation</br>
 27. skill list not visible until you click on a character</br>
+28. redo magic calculations</br>
 
 
 
