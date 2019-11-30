@@ -26,14 +26,14 @@ function itemStats(name, type, baseDmg, evasion, atkChance, physRes, magRes, phy
     this.magic = mag; //BUFF TO MAGICAL SKILLS (%)
     this.healing = heal; //HEALING BUFF (%)
 };
-let dagger = new itemStats("dagger", "closeCombat", 100, 10, 10, 0, 15, 0, 0);
-let slingshot = new itemStats("slingshot", "longRange", 100, 10, 10, 0, 15, 0, 0);
-let bat = new itemStats("bat", "closeCombat", 100, 10, 10, 0, 15, 0, 0);
-let whip = new itemStats("whip", "midRange", 100, 10, 10, 0, 15, 0, 0);
-let katana = new itemStats("katana", "midRange", 100, 10, 10, 0, 15, 0, 0);
-let knuckles = new itemStats("knuckles", "closeCombat", 100, 10, 10, 0, 15, 0, 0);
-let axe = new itemStats("axe", "midRange", 100, 10, 10, 0, 15, 0, 0);
-let blaster = new itemStats("blaster", "longRange", 100, 10, 10, 0, 15, 0, 0);
+let dagger = new itemStats("dagger", "closeCombat", 10, 10, 20, 20, 15, 0, 0);
+let slingshot = new itemStats("slingshot", "longRange", 10, 30, 10, 5, 15, 0, 0);
+let bat = new itemStats("bat", "closeCombat", 10, 220, 10, 10, 15, 0, 0);
+let whip = new itemStats("whip", "midRange", 10, 20, 10, 10, 15, 0, 0);
+let katana = new itemStats("katana", "midRange", 10, 25, 10, 20, 15, 0, 0);
+let knuckles = new itemStats("knuckles", "closeCombat", 10, 20, 10, 10, 15, 0, 0);
+let axe = new itemStats("axe", "midRange", 10, 20, 10, 15, 15, 0, 0);
+let blaster = new itemStats("blaster", "longRange", 10, 20, 10, 5, 15, 0, 0);
 
 charJoker = new Stats("joker", move, dagger, jokerSkills, 100, 100, 50, 50, "curse", "bless");
 charMona = new Stats("mona", move, slingshot, monaSkills, 100, 100, 50, 55, "wind", "elec");

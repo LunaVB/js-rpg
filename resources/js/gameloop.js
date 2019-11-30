@@ -12,11 +12,6 @@ let skillBtn = document.getElementById("useSkill");
 
 
 startBtn.addEventListener("click", function () {
-    let playerSkillDivArr = [skilldiv1, skilldiv2, skilldiv3, skilldiv4, skilldiv5];
-    console.log(playerSkillDivArr);
-    for (var i = 0; i < playerSkillDivArr.length; i++) {
-        playerSkillDivArr[i].addEventListener("click", function () {})
-    }
     atkBtn.addEventListener("click", function () {
         if (selectTeam == undefined && selectEnemy == undefined) {
             console.log("please select team member and enemy")
@@ -25,7 +20,7 @@ startBtn.addEventListener("click", function () {
             calcDamage();
         }
     })
-
     skillBtn.addEventListener("click", function () {})
+
 
 })

@@ -30,7 +30,7 @@ function enemyStats(name, move, type, enemyItemStats, hp, maxhp, mana, speed, ma
 let enemyImg1 = document.getElementById("enemy1");
 let enemyImg2 = document.getElementById("enemy2");
 let enemyImg3 = document.getElementById("enemy3");
-let baseEnemyItem = new enemyItemStats("branch", "closeCombat", 10, 10, 30, 0, 15, 0, 0);
+let baseEnemyItem = new enemyItemStats("branch", "closeCombat", 10, 20, 30, 0, 15, 0, 0);
 
 
 //LOW LEVEL WAVE SPAWNER (SLIME, PYROJACK, KOROPOKKURU, PIXIE AND MAKAMI)
