@@ -29,15 +29,6 @@
     }
 }*/
 
-
-
-
-
-
-
-
-
-
 /*function calcOrder() {
                      console.log("player team speed stats: " + selectedTeam[0].speed + " " + selectedTeam[1].speed + " and " + selectedTeam[2].speed + ". Enemy speed stats: " + enemy1.speed);
                      //IF FIRST SELECTED CHARACTER IS THE FASTEST

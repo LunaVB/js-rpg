@@ -39,21 +39,21 @@ function generateLowLvlWave() {
     let enemySlime2 = new enemyStats("slime 2", move, "lowlvl", baseEnemyItem, 40, 40, 20, 20, 0, "fire", "phys");
     let enemySlime3 = new enemyStats("slime 3", move, "lowlvl", baseEnemyItem, 40, 40, 20, 20, 0, "fire", "phys");
 
-    let enemyPyrojack = new enemyStats("pyrojack", move, "lowlvl", baseEnemyItem, 20, 20, 20, 20, 0, "wind", "fire");
-    let enemyPyrojack2 = new enemyStats("pyrojack 2", move, "lowlvl", baseEnemyItem, 20, 20, 20, 20, 0, "wind", "fire");
-    let enemyPyrojack3 = new enemyStats("pyrojack 3", move, "lowlvl", baseEnemyItem, 20, 20, 20, 20, 0, "wind", "fire");
+    let enemyPyrojack = new enemyStats("pyrojack", move, "lowlvl", baseEnemyItem, 40, 40, 20, 20, 0, "wind", "fire");
+    let enemyPyrojack2 = new enemyStats("pyrojack 2", move, "lowlvl", baseEnemyItem, 40, 40, 20, 20, 0, "wind", "fire");
+    let enemyPyrojack3 = new enemyStats("pyrojack 3", move, "lowlvl", baseEnemyItem, 40, 40, 20, 20, 0, "wind", "fire");
 
-    let enemyKoropokkuru = new enemyStats("koropokkuru", move, "lowlvl", baseEnemyItem, 35, 35, 20, 20, 0, "fire", "ice");
-    let enemyKoropokkuru2 = new enemyStats("koropokkuru 2", move, "lowlvl", baseEnemyItem, 35, 35, 20, 20, 0, "fire", "ice");
-    let enemyKoropokkuru3 = new enemyStats("koropokkuru 3", move, "lowlvl", baseEnemyItem, 35, 35, 20, 20, 0, "fire", "ice");
+    let enemyKoropokkuru = new enemyStats("koropokkuru", move, "lowlvl", baseEnemyItem, 40, 40, 20, 20, 0, "fire", "ice");
+    let enemyKoropokkuru2 = new enemyStats("koropokkuru 2", move, "lowlvl", baseEnemyItem, 40, 40, 20, 20, 0, "fire", "ice");
+    let enemyKoropokkuru3 = new enemyStats("koropokkuru 3", move, "lowlvl", baseEnemyItem, 40, 40, 20, 20, 0, "fire", "ice");
 
-    let enemyPixie = new enemyStats("pixie", move, "lowlvl", baseEnemyItem, 25, 25, 20, 20, 0, "ice", "elec");
-    let enemyPixie2 = new enemyStats("pixie 2", move, "lowlvl", baseEnemyItem, 25, 25, 20, 20, 0, "ice", "elec");
-    let enemyPixie3 = new enemyStats("pixie 3", move, "lowlvl", baseEnemyItem, 25, 25, 20, 20, 0, "ice", "elec");
+    let enemyPixie = new enemyStats("pixie", move, "lowlvl", baseEnemyItem, 40, 40, 20, 20, 0, "ice", "elec");
+    let enemyPixie2 = new enemyStats("pixie 2", move, "lowlvl", baseEnemyItem, 40, 40, 20, 20, 0, "ice", "elec");
+    let enemyPixie3 = new enemyStats("pixie 3", move, "lowlvl", baseEnemyItem, 40, 40, 20, 20, 0, "ice", "elec");
 
-    let enemyMakami = new enemyStats("makami", move, "lowlvl", baseEnemyItem, 55, 55, 20, 20, 0, "elec", "wind");
-    let enemyMakami2 = new enemyStats("makami 2", move, "lowlvl", baseEnemyItem, 55, 55, 20, 20, 0, "elec", "wind");
-    let enemyMakami3 = new enemyStats("makami 3", move, "lowlvl", baseEnemyItem, 55, 55, 20, 20, 0, "elec", "wind");
+    let enemyMakami = new enemyStats("makami", move, "lowlvl", baseEnemyItem, 40, 40, 20, 20, 0, "elec", "wind");
+    let enemyMakami2 = new enemyStats("makami 2", move, "lowlvl", baseEnemyItem, 40, 40, 20, 20, 0, "elec", "wind");
+    let enemyMakami3 = new enemyStats("makami 3", move, "lowlvl", baseEnemyItem, 40, 40, 20, 20, 0, "elec", "wind");
 
     console.log("creating wave ...")
     let mob1 = Math.floor(Math.random() * (5 - 1 + 1)) + 1; //decides which mobs will spawn in 1st spot

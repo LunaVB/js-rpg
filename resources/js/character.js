@@ -20,6 +20,13 @@ let healthPlayer1 = document.getElementById("healthPlayer1").value;
 let healthPlayer2 = document.getElementById("healthPlayer2").value;
 let healthPlayer3 = document.getElementById("healthPlayer3").value;
 
+let manaPlayer1Max = document.getElementById("manaPlayer1").max;
+let manaPlayer2Max = document.getElementById("manaPlayer2").max;
+let manaPlayer3Max = document.getElementById("manaPlayer3").max;
+let manaPlayer1 = document.getElementById("manaPlayer1").value;
+let manaPlayer2 = document.getElementById("manaPlayer2").value;
+let manaPlayer3 = document.getElementById("manaPlayer3").value;
+
 let healthEnemy1Max = document.getElementById("healthEnemy1").max;
 let healthEnemy2Max = document.getElementById("healthEnemy2").max;
 let healthEnemy3Max = document.getElementById("healthEnemy3").max;
@@ -54,7 +61,7 @@ let skill4;
 let skill5;
 let selectSkill;
 let skillArr;
-let descr = document.getElementById("#descr");
+let descr = document.getElementById("descr");
 
 let move;
 let selectTeam;
@@ -111,37 +118,31 @@ function createChar() {
                 selectedTeam[i] = charMona;
                 document.getElementById("playerName" + (i + 1)).innerText = "mona";
                 document.getElementById("healthPlayer" + (i + 1)).max = charMona.maxhp;
-
                 break;
             case "skull":
                 selectedTeam[i] = charSkull;
                 document.getElementById("playerName" + (i + 1)).innerText = "skull";
                 document.getElementById("healthPlayer" + (i + 1)).max = charSkull.maxhp;
-
                 break;
             case "panther":
                 selectedTeam[i] = charPanther;
                 document.getElementById("playerName" + (i + 1)).innerText = "panther";
                 document.getElementById("healthPlayer" + (i + 1)).max = charPanther.maxhp;
-
                 break;
             case "fox":
                 selectedTeam[i] = charFox;
                 document.getElementById("playerName" + (i + 1)).innerText = "fox";
                 document.getElementById("healthPlayer" + (i + 1)).max = charFox.maxhp;
-
                 break;
             case "queen":
                 selectedTeam[i] = charQueen;
                 document.getElementById("playerName" + (i + 1)).innerText = "queen";
                 document.getElementById("healthPlayer" + (i + 1)).max = charQueen.maxhp;
-
                 break;
             case "noir":
                 selectedTeam[i] = charNoir;
                 document.getElementById("playerName" + (i + 1)).innerText = "noir";
                 document.getElementById("healthPlayer" + (i + 1)).max = charNoir.maxhp;
-
                 break;
             case "crow":
                 selectedTeam[i] = charCrow;
@@ -194,6 +195,8 @@ function createChar() {
                 }
             })
             teamBtnArr[i].addEventListener("click", function () {
+                descr.innerText += "";
+
                 switch (teamBtnArr[i]) {
                     case teamBtnArr[0]:
                         teamBtnArr[0].classList.add("selected");
@@ -203,10 +206,13 @@ function createChar() {
                         skillDiv.classList.remove("skills-hidden");
                         useSkill.classList.add("useSkill");
                         useSkill.classList.remove("skills-hidden");
+                        descr.innerText = "";
                         holdTeamInfo1 = selectedTeam[0];
                         selectTeam = holdTeamInfo1;
                         healthPlayer1Max = holdTeamInfo1.maxhp;
+                        manaPlayer1Max = holdTeamInfo1.maxmana;
                         healthPlayer1 = holdTeamInfo1.hp;
+                        manaPlayer1 = holdTeamInfo1.mana;
                         playerSkills = selectTeam.moves;
                         playerImg1.style.backgroundImage = "url(./resources/img/characters/" + selectedTeam[0].name + "Thief.png)";
                         playerImg2.style.backgroundImage = "url(./resources/img/characters/" + selectedTeam[1].name + ".png)";
@@ -218,7 +224,6 @@ function createChar() {
                         skillArr[1].classList.remove("selected");
                         skillArr[2].classList.remove("selected");
                         skillArr[3].classList.remove("selected");
-                        skillArr[4].classList.remove("selected");
 
                         //skills
                         skill1 = holdTeamInfo1.moves[0];
@@ -232,14 +237,13 @@ function createChar() {
                         skill2Img.style.backgroundImage = "url(./resources/img/skills/" + selectedTeam[0].moves[1].element + ".png)";
                         skill3Img.style.backgroundImage = "url(./resources/img/skills/" + selectedTeam[0].moves[2].element + ".png)";
                         skill4Img.style.backgroundImage = "url(./resources/img/skills/" + selectedTeam[0].moves[3].element + ".png)";
-                        skill5Img.style.backgroundImage = "url(./resources/img/skills/" + selectedTeam[0].moves[4].element + ".png)";
+                        console.log(selectTeam);
 
                         //skillnames
                         skillName1.innerHTML = selectedTeam[0].moves[0].name;
                         skillName2.innerHTML = selectedTeam[0].moves[1].name;
                         skillName3.innerHTML = selectedTeam[0].moves[2].name;
                         skillName4.innerHTML = selectedTeam[0].moves[3].name;
-                        skillName5.innerHTML = selectedTeam[0].moves[4].name;
                         selectSkills()
                         break;
                     case teamBtnArr[1]:
@@ -250,10 +254,13 @@ function createChar() {
                         skillDiv.classList.remove("skills-hidden");
                         useSkill.classList.add("useSkill");
                         useSkill.classList.remove("skills-hidden");
+                        descr.innerText = "";
                         holdTeamInfo2 = selectedTeam[1];
                         selectTeam = holdTeamInfo2;
                         healthPlayer2Max = holdTeamInfo2.maxhp;
+                        manaPlayer2Max = holdTeamInfo2.maxmana;
                         healthPlayer2 = holdTeamInfo2.hp;
+                        manaPlayer2 = holdTeamInfo2.mana;
                         playerSkills = selectTeam.moves;
                         playerImg1.style.backgroundImage = "url(./resources/img/characters/" + selectedTeam[0].name + ".png)";
                         playerImg2.style.backgroundImage = "url(./resources/img/characters/" + selectedTeam[1].name + "Thief.png)";
@@ -266,28 +273,24 @@ function createChar() {
                         skillArr[1].classList.remove("selected");
                         skillArr[2].classList.remove("selected");
                         skillArr[3].classList.remove("selected");
-                        skillArr[4].classList.remove("selected");
 
                         //skills
                         skill1 = holdTeamInfo2.moves[0];
                         skill2 = holdTeamInfo2.moves[1];
                         skill3 = holdTeamInfo2.moves[2];
                         skill4 = holdTeamInfo2.moves[3];
-                        skill5 = holdTeamInfo2.moves[4];
 
                         //skill images
                         skill1Img.style.backgroundImage = "url(./resources/img/skills/" + selectedTeam[1].moves[0].element + ".png)";
                         skill2Img.style.backgroundImage = "url(./resources/img/skills/" + selectedTeam[1].moves[1].element + ".png)";
                         skill3Img.style.backgroundImage = "url(./resources/img/skills/" + selectedTeam[1].moves[2].element + ".png)";
                         skill4Img.style.backgroundImage = "url(./resources/img/skills/" + selectedTeam[1].moves[3].element + ".png)";
-                        skill5Img.style.backgroundImage = "url(./resources/img/skills/" + selectedTeam[1].moves[4].element + ".png)";
 
                         //skillnames
                         skillName1.innerHTML = selectedTeam[1].moves[0].name;
                         skillName2.innerHTML = selectedTeam[1].moves[1].name;
                         skillName3.innerHTML = selectedTeam[1].moves[2].name;
                         skillName4.innerHTML = selectedTeam[1].moves[3].name;
-                        skillName5.innerHTML = selectedTeam[1].moves[4].name;
                         selectSkills()
                         break;
                     case teamBtnArr[2]:
@@ -298,10 +301,13 @@ function createChar() {
                         skillDiv.classList.remove("skills-hidden");
                         useSkill.classList.add("useSkill");
                         useSkill.classList.remove("skills-hidden");
+                        descr.innerText = "";
                         holdTeamInfo3 = selectedTeam[2];
                         selectTeam = holdTeamInfo3;
                         healthPlayer3Max = holdTeamInfo3.maxhp;
+                        manaPlayer3Max = holdTeamInfo3.maxmana;
                         healthPlayer3 = holdTeamInfo3.hp;
+                        manaPlayer3 = holdTeamInfo3.mana;
                         playerSkills = selectTeam.moves;
                         playerImg1.style.backgroundImage = "url(./resources/img/characters/" + selectedTeam[0].name + ".png)";
                         playerImg2.style.backgroundImage = "url(./resources/img/characters/" + selectedTeam[1].name + ".png)";
@@ -314,28 +320,24 @@ function createChar() {
                         skillArr[1].classList.remove("selected");
                         skillArr[2].classList.remove("selected");
                         skillArr[3].classList.remove("selected");
-                        skillArr[4].classList.remove("selected");
 
                         //skills
                         skill1 = holdTeamInfo3.moves[0];
                         skill2 = holdTeamInfo3.moves[1];
                         skill3 = holdTeamInfo3.moves[2];
                         skill4 = holdTeamInfo3.moves[3];
-                        skill5 = holdTeamInfo3.moves[4];
 
                         //skill images
                         skill1Img.style.backgroundImage = "url(./resources/img/skills/" + selectedTeam[2].moves[0].element + ".png)";
                         skill2Img.style.backgroundImage = "url(./resources/img/skills/" + selectedTeam[2].moves[1].element + ".png)";
                         skill3Img.style.backgroundImage = "url(./resources/img/skills/" + selectedTeam[2].moves[2].element + ".png)";
                         skill4Img.style.backgroundImage = "url(./resources/img/skills/" + selectedTeam[2].moves[3].element + ".png)";
-                        skill5Img.style.backgroundImage = "url(./resources/img/skills/" + selectedTeam[2].moves[4].element + ".png)";
 
                         //skillnames
                         skillName1.innerHTML = selectedTeam[2].moves[0].name;
                         skillName2.innerHTML = selectedTeam[2].moves[1].name;
                         skillName3.innerHTML = selectedTeam[2].moves[2].name;
                         skillName4.innerHTML = selectedTeam[2].moves[3].name;
-                        skillName5.innerHTML = selectedTeam[2].moves[4].name;
                         selectSkills()
                         break;
                 }
@@ -351,55 +353,50 @@ function createChar() {
 }
 
 function selectSkills() {
-    skillArr = [skilldiv1, skilldiv2, skilldiv3, skilldiv4, skilldiv5];
-    for (let i = 0; i < 5; i++) {
+    skillArr = [skilldiv1, skilldiv2, skilldiv3, skilldiv4];
+    for (let i = 0; i < 4; i++) {
         skillArr[i].addEventListener("click", function () {
             switch (skillArr[i]) {
                 case skillArr[0]:
+                    console.log("skill 1 selected")
                     skillArr[0].classList.add("selected");
                     skillArr[1].classList.remove("selected");
                     skillArr[2].classList.remove("selected");
                     skillArr[3].classList.remove("selected");
-                    skillArr[4].classList.remove("selected");
                     skill1 = selectTeam.moves[0];
                     selectSkill = skill1;
-                    descr += "Skill description";
+                    descr.innerText = "";
+                    descr.innerText += "Skill Type: " + selectSkill.type + "\n" + "Cost: " + selectSkill.manaCost + " SP" + "\n" + "Description: " + "\n " + selectSkill.description + "\n ";
                     break;
                 case skillArr[1]:
                     skillArr[1].classList.add("selected");
                     skillArr[0].classList.remove("selected");
                     skillArr[2].classList.remove("selected");
                     skillArr[3].classList.remove("selected");
-                    skillArr[4].classList.remove("selected");
                     skill1 = selectTeam.moves[1];
                     selectSkill = skill2;
+                    descr.innerText = "";
+                    descr.innerText += "Skill Type: " + selectSkill.type + "\n" + "Cost: " + selectSkill.manaCost + " SP" + "\n" + "Description: " + "\n " + selectSkill.description + "\n ";
                     break;
                 case skillArr[2]:
                     skillArr[2].classList.add("selected");
                     skillArr[1].classList.remove("selected");
                     skillArr[0].classList.remove("selected");
                     skillArr[3].classList.remove("selected");
-                    skillArr[4].classList.remove("selected");
                     skill1 = selectTeam.moves[2];
                     selectSkill = skill3;
+                    descr.innerText = "";
+                    descr.innerText += "Skill Type: " + selectSkill.type + "\n" + "Cost: " + selectSkill.manaCost + " SP" + "\n" + "Description: " + "\n " + selectSkill.description + "\n ";
                     break;
                 case skillArr[3]:
                     skillArr[3].classList.add("selected");
                     skillArr[1].classList.remove("selected");
                     skillArr[2].classList.remove("selected");
                     skillArr[0].classList.remove("selected");
-                    skillArr[4].classList.remove("selected");
                     skill1 = selectTeam.moves[3];
                     selectSkill = skill4;
-                    break;
-                case skillArr[4]:
-                    skillArr[4].classList.add("selected");
-                    skillArr[1].classList.remove("selected");
-                    skillArr[2].classList.remove("selected");
-                    skillArr[3].classList.remove("selected");
-                    skillArr[0].classList.remove("selected");
-                    skill1 = selectTeam.moves[4];
-                    selectSkill = skill5;
+                    descr.innerText = "";
+                    descr.innerText += "Skill Type: " + selectSkill.type + "\n" + "Cost: " + selectSkill.manaCost + " SP" + "\n" + "Description: " + "\n " + selectSkill.description + "\n ";
                     break;
             }
         })
