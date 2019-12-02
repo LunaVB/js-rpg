@@ -1,0 +1,8 @@
+@font-face {
+    font-family: 'p5hatty';
+    src: url('p5hatty.woff2') format('woff2'),
+        url('p5hatty.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+

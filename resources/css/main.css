@@ -1,12 +1,15 @@
 @font-face {
-    font-family: "slumpstd";
-    src: url('../fonts/slumpstd.woff') format('woff');
+    font-family: 'p5hatty';
+    src: url("../fonts/p5hatty.woff2") format('woff2'),
+        url("../fonts/p5hatty.woff") format('woff');
     font-weight: normal;
     font-style: normal;
 }
 
 body {
-    font-family: "slumpstd";
+    font-family: 'p5hatty';
+    font-weight: normal;
+    font-style: normal;
     /* overflow-y: hidden; */
 }
 
@@ -68,6 +71,8 @@ body {
     color: white;
     background-color: black;
     overflow-y: scroll;
+    font-family: 'p5hatty';
+    font-size: 22px;
 }
 
 .menu {
@@ -87,7 +92,7 @@ body {
     background-color: black;
     display: flex;
     flex-direction: column;
-    overflow-y: scroll;
+    /* overflow-y: scroll; */
     overflow-x: hidden;
     cursor: pointer;
 }
@@ -99,6 +104,7 @@ body {
     border: 1px solid white;
     background-color: black;
     color: white;
+    font-size: 28px;
 }
 
 .playerOrder,
@@ -197,6 +203,8 @@ body {
     color: white;
     font-size: 20px;
     text-align: center;
+    font-family: 'p5hatty';
+    font-size: 22px;
 }
 
 .skillImg {
@@ -213,6 +221,7 @@ body {
     color: white;
     font-size: 25px;
     padding-left: 20px;
+    font-size: 30px;
 }
 
 .itemSelect,
@@ -290,6 +299,8 @@ body {
 #enemyName3 {
     width: 110px;
     height: 50px;
+    font-family: 'p5hatty';
+    font-size: 20px;
 }
 
 /* #player4 {

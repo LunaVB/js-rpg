@@ -61,7 +61,7 @@ let jokerSkills = [eiha, cleave, eigaon, dreamNeedle];
 let garu = new Skills("Garu", "attack", "wind", 15, 3, 1, 1, 0, "none", 0, "light wind damage to one foe");
 let dia = new Skills("Dia", "heal", "heal", 0, 3, 1, 1, 30, "heal", 0, "light heal for the user");
 let media = new Skills("Media", "heal", "heal", 0, 8, 1, 3, 30, "heal", 0, "light heal for all team members");
-let luckyPunch = new Skills("Lucky Punch", "attack", "phys", 10, 6, 1, 1, 0, "crit", 2, "miniscule physical damage to one foe, medium chance to crit");
+let luckyPunch = new Skills("Lucky Punch", "attack", "phys", 10, 6, 1, 1, 0, "crit", 2, "light physical damage to one foe");
 let windBoost = new Skills("Wind Boost", "passive", "passive", 0, 0, 999, 1, 0, "wind", 25, "passively increases damage for all wind skills")
 let monaSkills = [garu, dia, media, luckyPunch];
 
